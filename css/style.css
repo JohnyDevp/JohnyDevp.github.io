@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'SitkaSmall_bold';
+    src: url(./../fonts/sitka-small-bold.ttf);
+}
+
+@font-face {
+    font-family: 'SitkaSmall_italic';
+    src: url(sitka-small-italic.ttf) format('truetype'); ;
+}
+
+@font-face {
+    font-family: 'SitkaSmall_bolditalic';
+    src: url(./../fonts/sitka-small-bold-italic.ttf);
+}
+
+.mainpage-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upper-bar {
+    background-color: bisque;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.first-welcome-text {
+    font-family: SitkaSmall_bolditalic;
+    font-size: larger;
+}
+
+.regards {
+    display: flex;
+    width: 100%;
+    direction: ltr;
+    padding-right: 2em;
+    justify-content: flex-end;
+}
+.main-background {
+    justify-content: center;
+    align-items: center;
+}
+
+.main-picture {
+    width: 30%;
+}
+

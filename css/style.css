@@ -1,23 +1,34 @@
 @font-face {
     font-family: 'SitkaSmall_bold';
-    src: url(./../fonts/sitka-small-bold.ttf);
+    src: url(./../fonts/sitka-small-bold.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'SitkaSmall_italic';
-    src: url(sitka-small-italic.ttf) format('truetype'); ;
+    src: url(sitka-small-italic.ttf) format('truetype');
 }
 
 @font-face {
     font-family: 'SitkaSmall_bolditalic';
-    src: url(./../fonts/sitka-small-bold-italic.ttf);
+    src: url(./../fonts/sitka-small-bold-italic.ttf) format('truetype');
 }
+@keyframes color {
+    0%   { background: #33CCCC; }
+    20%  { background: #33CC36; }
+    40%  { background: #cc7833; }
+    60%  { background: #fc00ef; }
+    80%  { background: #33CC36; }
+    100% { background: #33CCCC; }
+  }
 
 .mainpage-body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background: #33CCCC; /* Fallback */
+    animation: color 9s infinite linear;
 }
 
 .upper-bar {
@@ -43,12 +54,25 @@
     padding-right: 2em;
     justify-content: flex-end;
 }
+
+
 .main-background {
     justify-content: center;
     align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .main-picture {
-    width: 30%;
+    width: 40%;
+    justify-content: center;
+    margin-top: 8%;
+    vertical-align: middle;
+    transition: transform .2s;
+}
+
+.main-picture:hover {
+    transform: scale(1.5);
 }
 

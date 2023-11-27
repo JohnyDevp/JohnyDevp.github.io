@@ -28,7 +28,7 @@
     flex-direction: column;
 
     background: #33CCCC; /* Fallback */
-    animation: color 30s infinite linear;
+    animation: color 9s infinite linear;
 }
 
 .upper-bar {
@@ -56,110 +56,23 @@
 }
 
 
-/* .main-background {
+.main-background {
     justify-content: center;
     align-items: center;
     display: flex;
     width: 100%;
     height: 100%;
-} */
-
-.main-background {
-    justify-content: center;
-    align-items: center;
-    display: flex   ;
-    width: 100%;
-    height: 100%;
 }
-
 
 .main-picture {
-    margin-top: 1rem;
-    display: grid;  
-    justify-content: center;
-    grid-template-columns: [pre-col] 30% [first-col] 40% [post-col] 30%; 
-    grid-template-rows: [first-row] 20% [post-row] 20%;
-    justify-items: center;
-}
-
-.pic-topleftstar {
-    grid-column-start: pre-col; 
-    grid-row-start: first-row; 
-    width: 30%;
-    margin-left: 10rem;
-
-    animation: glow 2s infinite alternate;
-}
-
-.pic-toprightstar {
-    grid-column-start: post-col; 
-    grid-row-start: first-row; 
-    width: 30%;
-    margin-right: 10rem;
-
-    animation: glow 3s infinite alternate;
-}
-
-.pic-bottomleftstar {
-    grid-column-start: pre-col; 
-    grid-row-start: post-row; 
-    width: 30%;
-    margin-left: 30rem;
-    margin-top: 0rem;
-    animation: glow 4s infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        /* box-shadow: 0 0 10px -10px #aef4af; */
-        filter: saturate(0);
-      }
-      to {
-        filter: saturate(3);
-        /* box-shadow: 0 0 10px 10px #aef4af; */
-      }
-}
-
-.pic-names {
-    grid-column-start: first-col; 
-    grid-row-start: first-row; 
-    width: 100%;
-    z-index: 2;
-    transition: transform .2s;
-}
-
-.pic-circle {
-    grid-column-start: first-col; 
-    grid-row-start: first-row; 
-    z-index: -1;
-    width: 85%;
-    -webkit-animation:spin 10s linear infinite;
-    -moz-animation:spin 10s linear infinite;
-    animation:spin 10s linear infinite;
-}
-
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
-}
-/* .main-picture {
     width: 40%;
     justify-content: center;
     margin-top: 8%;
     vertical-align: middle;
     transition: transform .2s;
-} */
+}
 
- .pic-names:hover {
-    transform: scale(1.1);
-    filter: saturate(3);
-} 
+.main-picture:hover {
+    transform: scale(1.5);
+}
 

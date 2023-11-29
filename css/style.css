@@ -24,7 +24,11 @@
     100% { background: #33CCCC; }
   }
 
+html {
+    overflow: hidden;
+}
 .mainpage-body {
+    max-width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;

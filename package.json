@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://JohnyDevp.github.io/JohnyDevp.github.io",
+  "homepage": "https://anosirekne.me",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

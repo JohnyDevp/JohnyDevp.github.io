@@ -3,16 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://anosirekne.me",
+  "homepage": "http://JohnyDevp.github.io/JohnyDevp.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "bootstrap": "^5.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

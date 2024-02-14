@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/media-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <title>Ondra&Terezka</title>
-</head>
-<body class="mainpage-body">
-    <div class="upper-bar">
-        <p class="first-welcome-text">
-            Vítejte na pracovní verzi naší svatební stránky. V průběhu času (nebojte se, bude to ještě před svatbou 😃 ) zde přibudou bližší informace k svatebnímu dni. 
-            Moc se na Vás všechny těšíme. 
-        </p>
-        <span class="regards">Terezka & Ondra</span>
+  </head>
+
+  <body>
+    <div class="background-container">
+      <img src="../res/bg4.png">
+        <!-- <div class="test"></div> -->
     </div>
-    <div class="main-background">
-        <div class="main-picture">
-            <img class="pic-topleftstar" src="res/topleftstar.png" />
-            <img class="pic-toprightstar" src="res/toprightstar.png" />
-            <img class="pic-circle" src="res/circlever2.png"/>
-            <img class="pic-names" src="res/main_names.png"/>
-            <img class="pic-bottomleftstar" src="res/bottomleftstar.png" />
+
+    <div>
+      <div id="navbar" class="navbar">
+        <ul>
+          <li id="about" onclick="navbarClickHandler('about')">O nás</li>
+          <li id="gifts" onclick="navbarClickHandler('about')">Dary</li>
+          <li id="claim">Potvrzení účasti</li>
+          <li id="program">Program</li>
+          <li id="tips">Kam na oběd</li>
+          <li id="accomodation">Ubytování</li>
+        </ul>
+        <!-- <div class="design-line"></div> -->
+      </div>
+
+      <div id="menu-button-container" class="menu-button-container">
+        <img
+          id="menu-icon"
+          class="menu-icon"
+          src="res/menu-icon.png"
+          onclick="toggleMenu()"
+          width="40px"
+        />
+      </div>
+    </div>
+
+    <div class="mainpage-container">
+      <div class="mainpage-body">
+        <div class="mainpage-ot-logo">
+          <img
+            style="float: inline-end"
+            src="res/obrysy_transparent.png"
+            width="400"
+          />
         </div>
+
+        <!-- <div class="mainpage-part-line"></div> -->
+        <div class="timer-container">
+          Do svatby zbývá
+
+          <div id="timer" class="mainpage-remaining-time">
+            16 dnu 24 hodin a 12 minut
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
+
+<script src="script/navbar.js"></script>
+<script src="script/main.js"></script>

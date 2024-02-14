@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'SitkaSmall_italic1';
+    src: url(../fonts/BriosoPro\ Italic.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'SitkaSmall_bold';
+    src: url(./../fonts/sitka-small-bold.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'SitkaSmall_italic';
+    src: url(sitka-small-italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'SitkaSmall_bolditalic';
+    src: url(./../fonts/sitka-small-bold-italic.ttf) format('truetype'),
+         url(./../fonts/sitka-small-3.woff) format('woff'),
+         url(./../fonts/BriosoPro\ Italic.otf) format('opentype');
+}

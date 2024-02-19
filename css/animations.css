@@ -1,0 +1,19 @@
+/* used for the logo on the main page */
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(200vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* used for the reamining time on the main page */
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-200vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

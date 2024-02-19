@@ -1,12 +1,54 @@
 .menu-button-container {
-  display: hidden;
   position: absolute;
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 800px) {
-  /*********ICON********/
+  /**********BACKGROUND AND BODY**********/
+  .background-container {
+    height: 400px;
+    transform: translateY(-10vh);
+  }
+
+  .bg-container2 {
+    transform: translateX(100px);
+  }
+  .mainpage-body {
+    grid-template-columns: repeat(1, 50%);
+    grid-template-rows: repeat(2, 50%);
+  }
+
+  .mainpage-ot-logo {
+    margin-top: 40%;
+  }
+
+  .mainpage-ot-logo > img {
+    width: 70vw;
+    min-width: 350px;
+  }
+
+  .timer-container {
+    margin-top: 10%;
+  }
+  .timer-heading {
+    font-size: 3em;
+    color: #204486;
+  }
+  
+  .mainpage-remaining-time {
+    font-weight: 700;
+    font-size: 3em;
+  
+    color: #d1a431;
+    flex-direction: column;
+    text-align: center;
+  
+    padding-bottom: 10vh;
+  }
+
+  /**********ICON**********/
   .menu-button-container {
-    z-index: 2;
+    z-index: 4;
     visibility: visible;
     display: inline;
     margin-left: 0px;
@@ -27,19 +69,22 @@
   /******************************/
 
   .navbar {
+    z-index: 4;
+
     display: grid;
     justify-content: center;
     width: 50%;
+    /* max-width: 280px; */
     transform: translateX(-100%);
     overflow: hidden;
     height: 100vh;
     position: absolute;
-    z-index: 2;
     background-color: #161664;
     transition: 0.3s ease-in;
   }
 
   .navbar > ul {
+    margin-top: 7vh;
     display: grid;
     padding-left: 0;
     grid-auto-flow: row;
@@ -56,6 +101,7 @@
     color: rgb(255, 255, 255);
     font-weight: bolder;
     border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
 
     margin: 0 10px 0px 10px;
     padding: 5px 10px 5px 10px;
@@ -64,6 +110,10 @@
     list-style: none;
     transition: ease 0.2s;
     cursor: pointer;
+  }
+
+  .design-line {
+    visibility: hidden;
   }
 
   .navbar > ul > li:hover {

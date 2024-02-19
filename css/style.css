@@ -1,6 +1,9 @@
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  /* background-color: #183263da; */
+  font-family: "SitkaSmall_italic1";
 }
 
 /***************************************************/
@@ -8,7 +11,7 @@ body {
 /***************************************************/
 
 .navbar {
-  background-color: rgb(22, 22, 100);
+  /* background-color: rgba(22, 22, 100, 0.527); */
   display: grid;
   justify-content: center;
 }
@@ -29,6 +32,7 @@ body {
   color: rgb(253, 253, 253);
   font-weight: bolder;
   border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
 
   margin: 0 10px 0px 10px;
   padding: 5px 10px 5px 10px;
@@ -44,16 +48,15 @@ body {
   color: cadetblue;
 }
 
-.navbar-li-selected {
-  margin: 0 20px 0 20px;
-  color: cadetblue;
+.navbar > ul > .li-active {
+  color: cadetblue !important;
 }
 
-.design-line {
+/* .design-line {
   justify-self: center;
-  border: 1px solid rgb(73, 34, 34);
+  border: 1px solid rgb(255, 255, 255);
   width: 100%;
-}
+} */
 
 /***************************************************/
 /******************* main page *********************/
@@ -61,87 +64,121 @@ body {
 
 .background-container {
   display: flex;
-  justify-content: center;
   z-index: -10;
   position: absolute;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
+
+  width: fit-content;
+  height: 800px;
+  min-width: 1500px;
+  min-height: 300px;
   overflow: hidden;
 }
 
 .background-container > img {
-  width: 900px;
-  transform: rotateZ(-45deg) scale(2);
+  width: 100%;
+  transform: translateY(-10px);
+  filter: brightness(0.8);
+}
+
+.bg-container2 {
+  display: inline;
+  flex-direction: row-reverse;
+  z-index: -11;
+  position: absolute;
+  /* align-items:; */
+  /* justify-content: center; */
+
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  transform: translateY(12px);
+}
+
+.bg-container2 > img {
+  float: left;
+  height: 1400px;
 }
 
 .mainpage-container {
-  display: flex;
-  justify-content: center;
-  height: 90vh;
+  width: 100%;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #7777773b;
 }
 
 .mainpage-body {
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(2, 50vh);
+  grid-template-columns: repeat(2, 50%);
   align-items: center;
-  /* width: 100vh; */
-}
-
-@keyframes slideFromBottom {
-  0% {
-    transform: translateY(200vh);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  z-index: 3;
+  width: 100vw;
 }
 
 .mainpage-ot-logo {
-  /* margin-top:1.5em; */
   display: flex;
-  /* flex-direction: column; */
-  align-items: end;
+  height: 100%;
+  width: 100%;
+  flex-direction: column-reverse;
+  justify-content: center;
+
+  align-items: center;
   animation: 1s ease-out 0s 1 slideFromBottom;
 }
 
+.mainpage-ot-logo > img {
+  float: right;
+  width: 60vh;
+}
+
+/*timer*/
+
 .timer-container {
-  grid-column-start: 3;
-  animation: 1s ease-out 0s 1 slideFromBottom;
-  flex-direction: column;
   display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column-reverse;
+  justify-content: center;
+
   align-items: center;
   text-align: center;
+
+  animation: 1s ease-out 0s 1 slideFromTop;
+}
+
+.timer-heading {
+  font-size: 4em;
+  color: #204486;
+  /* color: black; */
+  font-weight: bolder;
 }
 
 .mainpage-remaining-time {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: bolder;
-  font-size: xx-large;
-  float: right;
-  color: rgb(7, 7, 7);
-  font-size: 3em;
+  font-weight: 700;
+  font-size: 100px;
+
+  color: #d1a431;
   flex-direction: column;
-  align-items: start;
   text-align: center;
+
+  padding-bottom: 10vh;
 }
 
-@keyframes slideFromTop {
-  0% {
-    transform: translate(-300%, -100%) rotate(45deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(45deg);
-  }
-}
+/*********************************************/
+/**************** CONTENT ********************/
+/*********************************************/
 
-/* .mainpage-part-line {
-  border: 2px solid rgb(37, 58, 77);
+.content-container {
+  position: absolute;
+  width: 80vw;
+  height: 90vh;
+  overflow: hidden;
+  background-color: aqua;
+  justify-content: center;
   justify-self: center;
-  /* height:200px; */
-/* height: 60%; */
-/* transform: rotate(45deg); */
-/* float: right; */
-/*animation: 1s ease-out slideFromTop;*/
-/*} */
+  display: grid;
+  align-items: center;
+
+  visibility: hidden;
+}

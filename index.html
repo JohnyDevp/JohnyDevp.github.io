@@ -6,27 +6,58 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/media-style.css" />
     <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/animations.css" />
     <title>Ondra&Terezka</title>
   </head>
 
   <body>
     <div class="background-container">
-      <img src="../res/bg4.png">
-        <!-- <div class="test"></div> -->
+      <img src="../res/bg5.png" />
+    </div>
+    <div class="bg-container2">
+        <img src="./res/lower_bg.png" />
     </div>
 
-    <div>
+    <div class="head-container">
       <div id="navbar" class="navbar">
         <ul>
-          <li id="about" onclick="navbarClickHandler('about')">O nás</li>
-          <li id="gifts" onclick="navbarClickHandler('about')">Dary</li>
-          <li id="claim">Potvrzení účasti</li>
-          <li id="program">Program</li>
-          <li id="tips">Kam na oběd</li>
-          <li id="accomodation">Ubytování</li>
+          <li
+            id="about-btn"
+            onclick="navbarButtonSelected_handler('about-btn')"
+          >
+            O nás
+          </li>
+          <li
+            id="gifts-btn"
+            onclick="navbarButtonSelected_handler('gifts-btn')"
+          >
+            Dary
+          </li>
+          <li
+            id="claim-btn"
+            onclick="navbarButtonSelected_handler('claim-btn')"
+          >
+            Potvrzení účasti
+          </li>
+          <li
+            id="program-btn"
+            onclick="navbarButtonSelected_handler('program-btn')"
+          >
+            Program
+          </li>
+          <li id="tips-btn" onclick="navbarButtonSelected_handler('tips-btn')">
+            Kam na oběd
+          </li>
+          <li
+            id="accomodation-btn"
+            onclick="navbarButtonSelected_handler('accomodation-btn')"
+          >
+            Ubytování
+          </li>
         </ul>
-        <!-- <div class="design-line"></div> -->
-      </div>
+        <div class="design-line"></div>
+    </div>
+
 
       <div id="menu-button-container" class="menu-button-container">
         <img
@@ -42,23 +73,24 @@
     <div class="mainpage-container">
       <div class="mainpage-body">
         <div class="mainpage-ot-logo">
-          <img
-            style="float: inline-end"
-            src="res/obrysy_transparent.png"
-            width="400"
-          />
+          <img src="res/obrysy_transparent.png" width="400" />
         </div>
 
-        <!-- <div class="mainpage-part-line"></div> -->
         <div class="timer-container">
-          Do svatby zbývá
+          <div>
+            <div class="timer-heading">Do svatby zbývá</div>
 
-          <div id="timer" class="mainpage-remaining-time">
-            16 dnu 24 hodin a 12 minut
+            <div id="timer" class="mainpage-remaining-time"></div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="content-container">
+        <div id="about-content">
+            
+        </div>
+      </div>
+    </div> 
   </body>
 </html>
 

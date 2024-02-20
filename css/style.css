@@ -1,9 +1,9 @@
 body {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  /* background-color: #183263da; */
-  font-family: "SitkaSmall_italic1";
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	/* background-color: #183263da; */
+	font-family: "SitkaSmall_italic1";
 }
 
 /***************************************************/
@@ -11,158 +11,156 @@ body {
 /***************************************************/
 
 .navbar {
-  /* background-color: rgba(22, 22, 100, 0.527); */
-  display: grid;
-  justify-content: center;
+	/* background-color: rgba(22, 22, 100, 0.527); */
+	display: grid;
+	justify-content: center;
 }
 
 .navbar > ul {
-  display: grid;
-  padding-left: 0;
-  grid-auto-flow: column;
-  list-style: none;
-  justify-content: center;
-  align-items: center;
-  grid-auto-columns: max-content;
+	display: grid;
+	padding-left: 0;
+	grid-auto-flow: column;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	grid-auto-columns: max-content;
 }
 
 .navbar > ul > li {
-  font-family: "SitkaSmall_italic1";
-  font-size: 1.5em;
-  color: rgb(253, 253, 253);
-  font-weight: bolder;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 10px;
+	font-family: "SitkaSmall_italic1";
+	font-size: 1.5em;
+	color: rgb(253, 253, 253);
+	font-weight: bolder;
 
-  margin: 0 10px 0px 10px;
-  padding: 5px 10px 5px 10px;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  transition: ease 0.2s;
-  cursor: pointer;
+	margin: 0 10px 0px 10px;
+	padding: 5px 10px 5px 10px;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	transition: ease 0.2s;
+	cursor: pointer;
 }
 
 .navbar > ul > li:hover {
-  /* margin: 0 20px 0 20px; */
-  color: cadetblue;
+	/* margin: 0 20px 0 20px; */
+	color: cadetblue;
 }
 
 .navbar > ul > .li-active {
-  color: cadetblue !important;
+	color: cadetblue !important;
 }
 
-/* .design-line {
-  justify-self: center;
-  border: 1px solid rgb(255, 255, 255);
-  width: 100%;
-} */
+.design-line {
+	justify-self: center;
+	border: 1px solid rgb(255, 255, 255);
+	width: 100%;
+}
 
 /***************************************************/
 /******************* main page *********************/
 /***************************************************/
 
 .background-container {
-  display: flex;
-  z-index: -10;
-  position: absolute;
+	display: flex;
+	z-index: -10;
+	position: absolute;
 
-  width: fit-content;
-  height: 800px;
-  min-width: 1500px;
-  min-height: 300px;
-  overflow: hidden;
+	width: fit-content;
+	height: 800px;
+	min-width: 1500px;
+	min-height: 300px;
+	overflow: hidden;
 }
 
 .background-container > img {
-  width: 100%;
-  transform: translateY(-10px);
-  filter: brightness(0.8);
+	width: 100%;
+	transform: translateY(-10px);
+	filter: brightness(0.8);
 }
 
 .bg-container2 {
-  display: inline;
-  flex-direction: row-reverse;
-  z-index: -11;
-  position: absolute;
-  /* align-items:; */
-  /* justify-content: center; */
+	display: inline;
+	flex-direction: row-reverse;
+	z-index: -11;
+	position: absolute;
+	/* align-items:; */
+	/* justify-content: center; */
 
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  transform: translateY(12px);
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	transform: translateY(12px);
 }
 
 .bg-container2 > img {
-  float: left;
-  height: 1400px;
+	float: left;
+	height: 1400px;
 }
 
 .mainpage-container {
-  width: 100%;
-  display: grid;
-  height: 100vh;
-  overflow: hidden;
-  background-color: #7777773b;
+	width: 100%;
+	display: grid;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #7777773b;
 }
 
 .mainpage-body {
-  justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  align-items: center;
-  z-index: 3;
-  width: 100vw;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	align-items: center;
+	z-index: 3;
+	width: 100vw;
 }
 
 .mainpage-ot-logo {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: column-reverse;
-  justify-content: center;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column-reverse;
+	justify-content: center;
 
-  align-items: center;
-  animation: 1s ease-out 0s 1 slideFromBottom;
+	align-items: center;
+	animation: 1s ease-out 0s 1 slideFromBottom;
 }
 
 .mainpage-ot-logo > img {
-  float: right;
-  width: 60vh;
+	float: right;
+	width: 60vh;
 }
 
 /*timer*/
 
 .timer-container {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-direction: column-reverse;
-  justify-content: center;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column-reverse;
+	justify-content: center;
 
-  align-items: center;
-  text-align: center;
+	align-items: center;
+	text-align: center;
 
-  animation: 1s ease-out 0s 1 slideFromTop;
+	animation: 1s ease-out 0s 1 slideFromTop;
 }
 
 .timer-heading {
-  font-size: 4em;
-  color: #204486;
-  /* color: black; */
-  font-weight: bolder;
+	font-size: 4em;
+	color: #204486;
+	/* color: black; */
+	font-weight: bolder;
 }
 
 .mainpage-remaining-time {
-  font-weight: 700;
-  font-size: 100px;
+	font-weight: 700;
+	font-size: 100px;
 
-  color: #d1a431;
-  flex-direction: column;
-  text-align: center;
+	color: #d1a431;
+	flex-direction: column;
+	text-align: center;
 
-  padding-bottom: 10vh;
+	padding-bottom: 10vh;
 }
 
 /*********************************************/
@@ -170,15 +168,59 @@ body {
 /*********************************************/
 
 .content-container {
-  position: absolute;
-  width: 80vw;
-  height: 90vh;
-  overflow: hidden;
-  background-color: aqua;
-  justify-content: center;
-  justify-self: center;
-  display: grid;
-  align-items: center;
+  margin-top: 10px;
+  
+	visibility: hidden;
+	position: absolute;
+	z-index: 20;
+	width: 80vw;
+	height: 90vh;
+	overflow: hidden;
+	/* background-color: aqua; */
+	justify-content: center;
+	justify-self: center;
+	display: grid;
+	align-items: center;
 
-  visibility: hidden;
+	visibility: hidden;
+}
+
+/*ABOUT*/
+.about-content {
+}
+
+/*PROGRAM*/
+.program-content {
+	display: flex;
+  flex-direction: column;
+	align-items:center;
+
+  padding-top: 20px;
+	width: inherit;
+	height: 100vh;
+	background-color: #c1c1c4d0;
+	border-radius: 20px;
+
+	font-family: "SitkaSmall_italic1";
+}
+
+.program-content > li {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2, 30vw);
+	text-decoration: none;
+  color: #3b3685;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.program-time {
+	text-align: center;
+}
+
+.divider {
+  justify-content: center;
+}
+.divider > img {
+  width: 200px;
 }

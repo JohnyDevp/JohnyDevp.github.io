@@ -1,97 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/media-style.css" />
-    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="css/animations.css" />
-    <title>Ondra&Terezka</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/media-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+		<title>Ondra&Terezka</title>
+	</head>
 
-  <body>
-    <div class="background-container">
-      <img src="../res/bg5.png" />
-    </div>
-    <div class="bg-container2">
-        <img src="./res/lower_bg.png" />
-    </div>
+	<body>
+		<div class="background-container">
+			<img src="../res/bg5.png" />
+		</div>
+		<div class="bg-container2">
+			<img src="./res/lower_bg.png" />
+		</div>
 
-    <div class="head-container">
-      <div id="navbar" class="navbar">
-        <ul>
-          <li
-            id="about-btn"
-            onclick="navbarButtonSelected_handler('about-btn')"
-          >
-            O nás
-          </li>
-          <li
-            id="gifts-btn"
-            onclick="navbarButtonSelected_handler('gifts-btn')"
-          >
-            Dary
-          </li>
-          <li
-            id="claim-btn"
-            onclick="navbarButtonSelected_handler('claim-btn')"
-          >
-            Potvrzení účasti
-          </li>
-          <li
-            id="program-btn"
-            onclick="navbarButtonSelected_handler('program-btn')"
-          >
-            Program
-          </li>
-          <li id="tips-btn" onclick="navbarButtonSelected_handler('tips-btn')">
-            Kam na oběd
-          </li>
-          <li
-            id="accomodation-btn"
-            onclick="navbarButtonSelected_handler('accomodation-btn')"
-          >
-            Ubytování
-          </li>
-        </ul>
-        <div class="design-line"></div>
-    </div>
+		<div class="head-container">
+			<div id="navbar" class="navbar">
+				<ul>
+					<li
+						id="about-btn"
+						onclick="navbarButtonSelected_handler('about-btn')"
+					>
+						O nás
+					</li>
+					<li
+						id="gifts-btn"
+						onclick="navbarButtonSelected_handler('gifts-btn')"
+					>
+						Dary
+					</li>
+					<li
+						id="claim-btn"
+						onclick="navbarButtonSelected_handler('claim-btn')"
+					>
+						Potvrzení účasti
+					</li>
+					<li
+						id="program-btn"
+						onclick="navbarButtonSelected_handler('program-btn')"
+					>
+						Program
+					</li>
+					<li
+						id="tips-btn"
+						onclick="navbarButtonSelected_handler('tips-btn')"
+					>
+						Kam na oběd
+					</li>
+					<li
+						id="accomodation-btn"
+						onclick="navbarButtonSelected_handler('accomodation-btn')"
+					>
+						Ubytování
+					</li>
+				</ul>
+				<div class="design-line"></div>
+			</div>
 
+			<div id="menu-button-container" class="menu-button-container">
+				<img
+					id="menu-icon"
+					class="menu-icon"
+					src="res/menu-icon.png"
+					onclick="toggleMenu()"
+					width="40px"
+				/>
+			</div>
+		</div>
 
-      <div id="menu-button-container" class="menu-button-container">
-        <img
-          id="menu-icon"
-          class="menu-icon"
-          src="res/menu-icon.png"
-          onclick="toggleMenu()"
-          width="40px"
-        />
-      </div>
-    </div>
+		<div class="mainpage-container">
+			<div class="mainpage-body">
+				<div class="mainpage-ot-logo">
+					<img src="res/obrysy_transparent.png" width="400" />
+				</div>
 
-    <div class="mainpage-container">
-      <div class="mainpage-body">
-        <div class="mainpage-ot-logo">
-          <img src="res/obrysy_transparent.png" width="400" />
-        </div>
+				<div class="timer-container">
+					<div>
+						<div class="timer-heading">Do svatby zbývá</div>
 
-        <div class="timer-container">
-          <div>
-            <div class="timer-heading">Do svatby zbývá</div>
+						<div id="timer" class="mainpage-remaining-time"></div>
+					</div>
+				</div>
+			</div>
 
-            <div id="timer" class="mainpage-remaining-time"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-container">
-        <div id="about-content">
-            
-        </div>
-      </div>
-    </div> 
-  </body>
+			<div class="content-container" style="visibility: visible">
+				<div id="about-content" class="about-content">
+					about-content
+				</div>
+				<div id="gifts-content" class="gifts-content">
+					gifts-content
+				</div>
+				<div id="claim-content" class="claim-content">
+					claim-content
+				</div>
+				<div id="program-content" class="program-content">
+					<li>
+						<div class="program-time">8:00</div>
+						<div class="program-part">Probuzení ženicha</div>
+					</li>
+                    <div class="divider">
+                        <img src="./res/divider_gold.png" />
+                    </div>
+                    <li>
+						<div class="program-time">8:00</div>
+						<div class="program-part">Probuzení ženicha</div>
+					</li>
+                    <li>
+						<div class="program-time">8:00</div>
+						<div class="program-part">Probuzení ženicha</div>
+					</li>
+				</div>
+				<div id="tips-content" class="tips-content">tips-content</div>
+				<div id="accomodation-content" class="accomodation-content">
+					accomodation-content
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 
 <script src="script/navbar.js"></script>

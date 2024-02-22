@@ -64,20 +64,22 @@ function navbarButtonSelected_handler(btn_id) {
 	// make active (marked) only the clicked button
 	current_btn.classList.add("li-active");
 
+	// hide the main window
+	document.getElementsByClassName("mainpage-container")[0].style.display =
+		"none";
+
 	// open the div the belongs to clicked button
-	document.getElementsByClassName("content-container")[0].style.visibility =
-		"visible";
-  
+	document.getElementsByClassName("content-container")[0].style.display = ""; // this will remove the display: none; property from html code
+
 	document
 		.querySelectorAll("div.content-container>div")
 		.forEach((div_content) => {
 			if (div_content.id == String(btn_id).split("-")[0] + "-content") {
-				div_content.style.visibility = "visible";
-				div_content.style.height = 'inherit'
+				div_content.style.display = "";
 			} else {
-				div_content.style.visibility = "hidden";
-				div_content.style.height = '0px'
+				div_content.style.display = "none";
 			}
 		});
-	document.getElementsByClassName('mainpage-body')[0].style.visibility = 'hidden'
+	document.getElementsByClassName("mainpage-body")[0].style.visibility =
+		"hidden";
 }

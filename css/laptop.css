@@ -1,4 +1,11 @@
 @media (min-width: 800px) {
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+
 	/* cover menu for mobile */
 	.menu-button-container {
 		position: absolute;
@@ -9,8 +16,6 @@
 	body {
 		padding: 0;
 		margin: 0;
-		overflow: hidden;
-		/* background-color: #183263da; */
 		font-family: "SitkaSmall_italic1";
 	}
 
@@ -22,6 +27,7 @@
 		/* background-color: rgba(22, 22, 100, 0.527); */
 		display: grid;
 		justify-content: center;
+		height: 70px;
 	}
 
 	.navbar > ul {
@@ -69,7 +75,6 @@
 	/***************************************************/
 
 	.background-container {
-		display: flex;
 		z-index: -10;
 		position: absolute;
 
@@ -77,7 +82,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		width: 100%;
-		height: 800px;
+		height: 650px;
 		min-width: 1500px;
 		min-height: 300px;
 		overflow: hidden;
@@ -92,29 +97,30 @@
 		filter: brightness(0.8);
 	}
 
-  .bg-container2 {
-    display: inline;
-    flex-direction: row-reverse;
-    z-index: -11;
-    position: absolute;
-  
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    transform: translateY(12px);
-  }
-  
-  .bg-container2 > img {
-    float: left;
-    height: 1400px;
-  }
+	.bg-container2 {
+		z-index: -11;
+		position: absolute;
+
+		overflow-y: scroll;
+		display: inline;
+		flex-direction: row-reverse;
+
+		bottom: 0;
+		right: 0;
+		overflow: hidden;
+	}
+
+	.bg-container2 > img {
+		float: left;
+		height: 300px;
+	}
 
 	.mainpage-container {
+		background-color: rgba(240, 248, 255, 0.199);
 		width: 100%;
 		display: grid;
-		height: 100vh;
-		overflow: hidden;
-		background-color: #7777773b;
+		height: calc(100% - 70px);
+		min-height: fit-content;
 	}
 
 	.mainpage-body {
@@ -122,8 +128,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 50%);
 		align-items: center;
-		z-index: 3;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.mainpage-ot-logo {
@@ -165,13 +170,11 @@
 
 	.mainpage-remaining-time {
 		font-weight: 700;
-		font-size: 100px;
+		font-size: 450%;
 
 		color: #d1a431;
 		flex-direction: column;
 		text-align: center;
-
-		padding-bottom: 10vh;
 	}
 
 	/*********************************************/
@@ -179,25 +182,33 @@
 	/*********************************************/
 
 	.content-container {
-		margin-top: 10px;
+		display: grid;
 
-		visibility: hidden;
-		position: absolute;
-		z-index: 18;
-		width: 80vw;
-		height: 90vh;
-		overflow: hidden;
-		/* background-color: aqua; */
+		height: calc(100% - 70px);
+		background-color: rgba(240, 248, 255, 0.199);
+		width: 100%;
+
+		background-image: url(./../res/circlever_wbg.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 1200px;
+		/* background-color: #eeeef562; */
+
 		justify-content: center;
 		justify-self: center;
-		display: grid;
 		align-items: center;
-
-		visibility: hidden;
 	}
 
 	/*ABOUT*/
 	.about-content {
+	}
+
+	/* GIFTS */
+	.gifts-content {
+	}
+
+	/* CLAIM */
+	.claim-content {
 	}
 
 	/*PROGRAM*/
@@ -207,18 +218,34 @@
 		align-items: center;
 
 		padding-top: 20px;
-		width: inherit;
-		height: 100vh;
-		background-color: #c1c1c4d0;
-		/* border-radius: 0px; */
+		padding-bottom: 20px;
+		/* width: fit-content; */
+		width: 100vw;
+		height: inherit;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
 
 		font-family: "SitkaSmall_italic1";
 	}
 
+	.program-content::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
+
+	.program-header {
+		color: #d1a926;
+		font-size: 450%;
+		margin-bottom: 40px;
+		font-weight: 600;
+	}
+
 	.program-content > li {
+		margin: 20px 0px 10px 0px;
 		list-style: none;
 		display: grid;
-		grid-template-columns: repeat(2, 30vw);
+		grid-template-columns: 50vw 50vw;
 		text-decoration: none;
 		color: #3b3685;
 		font-weight: 900;
@@ -226,7 +253,8 @@
 	}
 
 	.program-time {
-		text-align: center;
+		text-align: right;
+		padding-right: 40px;
 	}
 
 	.divider {
@@ -234,6 +262,6 @@
 	}
 
 	.divider > img {
-		width: 200px;
+		width: 300px;
 	}
 }

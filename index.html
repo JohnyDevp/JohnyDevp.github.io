@@ -3,20 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/media-style.css" />
+		<link rel="stylesheet" type="text/css" href="css/laptop.css" />
+		<link rel="stylesheet" type="text/css" href="css/phone-portrait.css" />
+		<link rel="stylesheet" type="text/css" href="css/phone-landscape.css" />
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/animations.css" />
 		<title>Ondra&Terezka</title>
 	</head>
 
 	<body>
-		<div class="background-container">
-			<!-- <img src="../res/bg5.png" /> -->
-		</div>
-		<div class="bg-container2">
-			<img src="./res/lower_bg.png" />
-		</div>
+		<div class="background-container"></div>
 
 		<div class="head-container">
 			<div id="navbar" class="navbar">
@@ -43,7 +39,7 @@
 						id="program-btn"
 						onclick="navbarButtonSelected_handler('program-btn')"
 					>
-						Program
+						Svatební program
 					</li>
 					<li
 						id="tips-btn"
@@ -86,39 +82,66 @@
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="content-container" style="visibility: hidden">
-				<div id="about-content" class="about-content">
-					about-content
+		<div class="content-container" style="display: none">
+			<!-- <div id="about-content" class="about-content">about-content</div>
+			<div id="gifts-content" class="gifts-content">gifts-content</div>
+			<div id="claim-content"     class="claim-content">claim-content</div> -->
+			<div id="program-content" class="program-content">
+				<div class="program-header">Svatební program</div>
+				<div class="divider">
+					<img src="./res/divider2_gold.png" />
 				</div>
-				<div id="gifts-content" class="gifts-content">
-					gifts-content
-				</div>
-				<div id="claim-content" class="claim-content">
-					claim-content
-				</div>
-				<div id="program-content" class="program-content">
-					<li>
-						<div class="program-time">8:00</div>
-						<div class="program-part">Probuzení ženicha</div>
-					</li>
-					<div class="divider">
-						<img src="./res/divider_gold.png" />
+				<li>
+					<div class="program-time">6:00</div>
+					<div class="program-part">Probuzení nevěsty</div>
+				</li>
+				<li>
+					<div class="program-time">7:00</div>
+					<div class="program-part">Probuzení ženicha</div>
+				</li>
+				<li>
+					<div class="program-time">10:30</div>
+					<div class="program-part">Svatební obřad</div>
+				</li>
+				<li>
+					<div class="program-time">12:30</div>
+					<div class="program-part">
+						Oběd pro rodinu a pozvané hosty
 					</div>
-					<li>
-						<div class="program-time">8:00</div>
-						<div class="program-part">Probuzení ženicha</div>
-					</li>
-					<li>
-						<div class="program-time">8:00</div>
-						<div class="program-part">Probuzení ženicha</div>
-					</li>
-				</div>
-				<div id="tips-content" class="tips-content">tips-content</div>
-				<div id="accomodation-content" class="accomodation-content">
-					accomodation-content
+				</li>
+				<li>
+					<div class="program-time">16:00</div>
+					<div class="program-part">
+						Odpolední hostina pro pozvané přátele
+					</div>
+				</li>
+				<li>
+					<div class="program-time">16:30</div>
+					<div class="program-part">
+						Krájení dortu
+					</div>
+				</li>
+				<li>
+					<div class="program-time">17:00</div>
+					<div class="program-part">
+						První tanec
+					</div>
+				</li>
+				<div class="divider">
+					<img src="./res/divider2_gold.png" />
 				</div>
 			</div>
+
+			<!-- <div id="tips-content" class="tips-content">tips-content</div>
+			<div id="accomodation-content" class="accomodation-content">
+				accomodation-content
+			</div> -->
+		</div>
+
+		<div class="bg-container2">
+			<img src="./res/lower_bg2.png" />
 		</div>
 	</body>
 </html>

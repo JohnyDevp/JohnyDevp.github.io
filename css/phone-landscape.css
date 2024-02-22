@@ -1,0 +1,14 @@
+@media screen and (max-height: 800px) and (orientation: landscape) {
+	/* setup for body */
+	body {
+		padding: 0;
+		margin: 0;
+		font-family: "SitkaSmall_italic1";
+        background-color: #204486;
+	}
+
+
+	.background-container {
+        display: none;
+	}
+}

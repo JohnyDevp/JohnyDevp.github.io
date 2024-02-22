@@ -1,4 +1,5 @@
 @media (min-width: 800px) {
+	/******************* MASTER SETUP *********************/
 	html,
 	body {
 		height: 100%;
@@ -6,7 +7,7 @@
 		overflow: hidden;
 	}
 
-	/* cover menu for mobile */
+	/* hide mobile's menu button */
 	.menu-button-container {
 		position: absolute;
 		visibility: hidden;
@@ -20,7 +21,7 @@
 	}
 
 	/***************************************************/
-	/******************* navbar design *********************/
+	/******************* NAVBAR DESIGN *********************/
 	/***************************************************/
 
 	.navbar {
@@ -44,7 +45,7 @@
 		font-family: "SitkaSmall_italic1";
 		font-size: 1.5em;
 		color: rgb(253, 253, 253);
-		font-weight: bolder;
+		font-weight: 900;
 
 		margin: 0 10px 0px 10px;
 		padding: 5px 10px 5px 10px;
@@ -71,7 +72,7 @@
 	}
 
 	/***************************************************/
-	/******************* main page *********************/
+	/******************* MAIN PAGE CONTENT *********************/
 	/***************************************************/
 
 	.background-container {
@@ -147,7 +148,7 @@
 		width: 60vh;
 	}
 
-	/*timer*/
+	/* timer */
 
 	.timer-container {
 		display: flex;
@@ -178,7 +179,7 @@
 	}
 
 	/*********************************************/
-	/**************** CONTENT ********************/
+	/**************** BOOKMARK'S CONTENT ********************/
 	/*********************************************/
 
 	.content-container {
@@ -192,7 +193,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 1200px;
-		/* background-color: #eeeef562; */
 
 		justify-content: center;
 		justify-self: center;

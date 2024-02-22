@@ -199,10 +199,46 @@
 		align-items: center;
 	}
 
-	/*ABOUT*/
-	.about-content {
+	/* ABOUT */
+	.about-bookmark {
+		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100vw;
+		overflow-y: scroll;
 	}
 
+	.about-header {
+		color: #d1a926;
+		font-size: 450%;
+		margin-bottom: 40px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.about-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-top: 20px;
+		padding-bottom: 20px;
+		/* width: fit-content; */
+		width: 100vw;
+		height: inherit;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+	}
+	.program-content::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
+
+	
 	/* GIFTS */
 	.gifts-content {
 	}
@@ -211,7 +247,7 @@
 	.claim-content {
 	}
 
-	/*PROGRAM*/
+	/* PROGRAM */
 	.program-bookmark {
 		margin-top: 100px;
 		display: flex;

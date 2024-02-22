@@ -9,6 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/animations.css" />
 		<title>Ondra&Terezka</title>
+
+		<script src="script/questions.js"></script>
 	</head>
 
 	<body>
@@ -21,13 +23,19 @@
 						id="about-btn"
 						onclick="navbarButtonSelected_handler('about-btn')"
 					>
-						O nás
+						Nějaké to info
+					</li>
+					<li
+						id="about-btn"
+						onclick="navbarButtonSelected_handler('about-btn')"
+					>
+						O nás...
 					</li>
 					<li
 						id="gifts-btn"
 						onclick="navbarButtonSelected_handler('gifts-btn')"
 					>
-						Dary
+						Svatební dary
 					</li>
 					<li
 						id="claim-btn"
@@ -85,11 +93,25 @@
 		</div>
 
 		<div class="content-container" style="display: none">
-			<!-- <div id="about-content" class="about-content">about-content</div>
-			<div id="gifts-content" class="gifts-content">gifts-content</div>
-			<div id="claim-content"     class="claim-content">claim-content</div> -->
 
-			<div class="program-bookmark" id="program-bookmark">
+			<div class="about-bookmark" id="about-bookmark" style="display: none;">
+				<div class="about-header">O nás...</div>
+				<div id="about-content" class="about-content">
+
+				</div>
+				<input type="button" name="Ukázat správné odpovědi"/>
+			</div>
+
+			<div class="gifts-bookmark" id="gifts-bookmark" style="display: none;">
+				<div class="program-header">Svatební dary</div>
+				<div id="gifts-content" class="gifts-content">
+					gifts-content
+				</div>
+			</div>
+
+			<!-- <div id="claim-content"     class="claim-content">claim-content</div> -->
+
+			<div class="program-bookmark" id="program-bookmark" style="display: none;">
 				<div class="program-header">Svatební program</div>
 				<div id="program-content" class="program-content">
 					<div class="divider">

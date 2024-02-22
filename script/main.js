@@ -74,6 +74,11 @@ function navbarButtonSelected_handler(btn_id) {
 	document
 		.querySelectorAll("div.content-container>div")
 		.forEach((content_bookmark) => {
+			// close the menu (if on mobile device)
+			if (screen.width <= 800)
+				toggleMenu();
+
+			//  hide the bookmarks, that weren't selected and show the one which was
 			if (content_bookmark.id == String(btn_id).split("-")[0] + "-bookmark") {
 				content_bookmark.style.display = "";
 			} else {

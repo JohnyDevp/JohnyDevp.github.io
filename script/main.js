@@ -73,11 +73,11 @@ function navbarButtonSelected_handler(btn_id) {
 
 	document
 		.querySelectorAll("div.content-container>div")
-		.forEach((div_content) => {
-			if (div_content.id == String(btn_id).split("-")[0] + "-content") {
-				div_content.style.display = "";
+		.forEach((content_bookmark) => {
+			if (content_bookmark.id == String(btn_id).split("-")[0] + "-bookmark") {
+				content_bookmark.style.display = "";
 			} else {
-				div_content.style.display = "none";
+				content_bookmark.style.display = "none";
 			}
 		});
 	document.getElementsByClassName("mainpage-body")[0].style.visibility =

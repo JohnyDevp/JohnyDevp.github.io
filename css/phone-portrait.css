@@ -1,4 +1,4 @@
-@media only screen and (max-width: 800px) and (orientation: portrait) {
+@media only screen and (max-width: 1080px) /*(orientation: portrait) */ {
 	html,
 	body {
 		width: 100%;
@@ -40,7 +40,7 @@
 		width: 40px;
 		transition: 0.3s ease-in;
 	}
-	
+
 	.navbar {
 		z-index: 20;
 
@@ -172,6 +172,7 @@
 	.mainpage-ot-logo > img {
 		float: right;
 		width: 70vw;
+		max-width: 610px;
 		min-width: 350px;
 	}
 

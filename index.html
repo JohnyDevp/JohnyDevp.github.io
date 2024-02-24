@@ -6,11 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="css/laptop.css" />
 		<link rel="stylesheet" type="text/css" href="css/phone-portrait.css" />
 		<link rel="stylesheet" type="text/css" href="css/phone-landscape.css" />
+		<link rel="stylesheet" type="text/css" href="css/question-cards.css" />
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/animations.css" />
 		<title>Ondra&Terezka</title>
 
-		<script src="script/questions.js"></script>
 	</head>
 
 	<body>
@@ -20,8 +20,8 @@
 			<div id="navbar" class="navbar">
 				<ul>
 					<li
-						id="about-btn"
-						onclick="navbarButtonSelected_handler('about-btn')"
+						id="info-btn"
+						onclick="navbarButtonSelected_handler('info-btn')"
 					>
 						Nějaké to info
 					</li>
@@ -97,7 +97,6 @@
 			<div class="about-bookmark" id="about-bookmark" style="display: none;">
 				<div class="about-header">O nás...</div>
 				<div id="about-content" class="about-content">
-
 				</div>
 				<input type="button" name="Ukázat správné odpovědi"/>
 			</div>
@@ -167,5 +166,6 @@
 	</body>
 </html>
 
+<script src="script/questions.js"></script>
 <script src="script/navbar.js"></script>
 <script src="script/main.js"></script>

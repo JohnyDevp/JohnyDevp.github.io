@@ -1,4 +1,4 @@
-@media (min-width: 800px) {
+@media (min-width: 1080px) {
 	/******************* MASTER SETUP *********************/
 	html,
 	body {
@@ -238,7 +238,18 @@
 		display: none;
 	}
 
-	
+	.question-card {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		font-size: 200%;
+	}
+	.question-card > input {
+		size: 100px;
+	}
+
 	/* GIFTS */
 	.gifts-content {
 	}

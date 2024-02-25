@@ -153,20 +153,20 @@ questions_arr.forEach((item) => {
         <div class="question">${item.question}</div>
         <div class="answer-buttons-box">
             <label class='radio-container'> Ondra
-                <input type="radio" name="answer${id}" id="ondra" checked='checked'/>
-                <span class="checkmark"></span>
+                <input type="radio" name="answer${id}" id="ondra${id}" checked='checked'/>
+                <span class="checkmark" id="ondra${id}_checkmark"></span>
             </label>
             <label class='radio-container'> Terezka
-                <input type="radio" name="answer${id}" id="terez"/> 
-                <span class="checkmark"></span>
+                <input type="radio" name="answer${id}" id="terez${id}"/> 
+                <span class="checkmark" id="terez${id}_checkmark"></span>
             </label>
             <label class='radio-container'> Oba
-                <input type="radio" name="answer${id}" id="both"/>
-                <span class="checkmark"></span>
+                <input type="radio" name="answer${id}" id="both${id}"/>
+                <span class="checkmark" id="both${id}_checkmark"></span>
             </label>
             <label class='radio-container'> Ani jeden
-                <input type="radio" name="answer${id}" id="neither"/> 
-                <span class="checkmark"></span>
+                <input type="radio" name="answer${id}" id="neither${id}"/> 
+                <span class="checkmark" id="neither${id}_checkmark"></span>
             </label>
         </div>
         <div class="answer-supplement"></div>
@@ -174,4 +174,50 @@ questions_arr.forEach((item) => {
     `;
 	id++;
 });
+
+finalHTML += `
+	<button class="show-answers-btn" onclick='showAnswers()' name="Ukázat správné odpovědi"/>Ukázat správné odpovědi</button>
+`;
 document.getElementById("about-content").innerHTML = finalHTML;
+
+function showAnswers() {
+	let questions_cards_divs = document.getElementsByClassName("question-card");
+	for (let q_id = 0; q_id < questions_arr.length; q_id++) {
+		let radio_containers =
+			questions_cards_divs[q_id].getElementsByClassName(
+				"radio-container"
+			);
+		for (let rad_id = 0; rad_id < radio_containers.length; rad_id++) {
+			console.log(radio_containers[rad_id]);
+			let radio_input =
+				radio_containers[rad_id].querySelectorAll("input")[0];
+			let radio_design =
+				radio_containers[rad_id].querySelector(".checkmark");
+			if (radio_input.checked) {
+				if (
+					radio_input.id ==
+					questions_arr[q_id].answer + q_id.toString()
+				) {
+					radio_design.style.backgroundColor = "green";
+					if (questions_arr[q_id].suplement)
+						radio_containers[rad_id].innerHTML +=
+							" - " + questions_arr[q_id].suplement;
+				} else {
+					radio_design.style.backgroundColor = "red";
+				}
+			} else {
+				if (
+					radio_input.id ==
+					questions_arr[q_id].answer + q_id.toString()
+				) {
+					radio_design.style.backgroundColor = "green";
+					if (questions_arr[q_id].suplement)
+						radio_containers[rad_id].innerHTML +=
+							" - " + questions_arr[q_id].suplement;
+				} else {
+					radio_design.style.backgroundColor = "";
+				}
+			}
+		}
+	}
+}

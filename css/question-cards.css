@@ -8,6 +8,7 @@
 	position: relative;
 	padding-left: 35px;
 	margin-bottom: 12px;
+	/* text-align: center; */
 	cursor: pointer;
 	font-size: 22px;
 	-webkit-user-select: none;
@@ -17,7 +18,7 @@
 }
 
 /* Hide the browser's default radio button */
-.radio-container input {
+.radio-container input[type="radio"] {
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
@@ -69,22 +70,22 @@
 }
 
 .show-answers-btn {
-    transition: ease-out 0.2s;
-    background-color: #1c325a;
-    color: white;
-    border-radius: 10px;
-    padding: 5px 20px 5px 20px;
-    margin-top: 10px;
-    font-size: 200%;
-    border: none;
-    font-weight: bold;
-    font-family: 'Sitkasmall_italic1';
-    cursor: pointer;
+	transition: ease-out 0.2s;
+	background-color: #1c325a;
+	color: white;
+	border-radius: 10px;
+	padding: 5px 20px 5px 20px;
+	margin-top: 10px;
+	font-size: 200%;
+	border: none;
+	font-weight: bold;
+	font-family: "Sitkasmall_italic1";
+	cursor: pointer;
 }
 
 .show-answers-btn:hover {
-    background-color: #395a97;
-    transition: ease-in 0.2s;
+	background-color: #395a97;
+	transition: ease-in 0.2s;
 }
 
 /* ====================================================== */

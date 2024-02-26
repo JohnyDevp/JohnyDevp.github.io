@@ -144,17 +144,80 @@
 							/>
 						</div>
 						<div class="form-field">
-							<label for="num_of_persons"
-								>Za kolik lidí potvrzujete účast</label
-							>
-							<input
-								type="number"
-								name="num_of_persons"
-								id="number-of-other-persons"
-								pattern="^[0-9]*$"
-								value=""
-							/>
+							<label for="dieta">Účast</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">
+									Přijdu na oběd
+								</div>
+								<input
+									type="radio"
+									name="attendation"
+									id="lunch"
+								/>
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Přijdu večer</div>
+								<input
+									type="radio"
+									name="attendation"
+									id="evening"
+								/>
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">
+									Nemohu dorazit
+								</div>
+								<input
+									type="radio"
+									name="attendation"
+									id="cannot"
+								/>
+								<span class="checkmark"></span>
+							</label>
 						</div>
+						<div class="form-field">
+							<label for="dieta">Dieta</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Ne</div>
+								<input
+									type="radio"
+									name="diet"
+									id="diet-no"
+									checked="true"
+								/>
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Ano</div>
+								<input type="radio" name="diet" id="diet-no" />
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="form-field">
+							<label for="dieta">Velikost porce</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Plná</div>
+								<input
+									type="radio"
+									name="portion"
+									id="full"
+									checked="true"
+								/>
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Poloviční</div>
+								<input type="radio" name="portion" id="half" />
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="form-field">
+							<label for="dieta">Alkohol, který oceníte</label>
+							<input type="text" />
+						</div>
+
 						<button id="submit-btn" class="submit-btn">
 							ODESLAT
 						</button>

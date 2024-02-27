@@ -91,7 +91,10 @@
 			</div>
 		</div>
 
-		<div class="content-container" style="display: none">
+		<div class="content-container" style="display: none;">
+			<!-- <div class="test">
+				
+			</div> -->
 			<div
 				class="about-bookmark"
 				id="about-bookmark"
@@ -153,6 +156,7 @@
 									type="radio"
 									name="attendation"
 									id="lunch"
+									checked="true"
 								/>
 								<span class="checkmark"></span>
 							</label>
@@ -167,31 +171,13 @@
 							</label>
 							<label class="radio-container">
 								<div style="padding-top: 2px">
-									Nemohu dorazit
+									Nemohu přijít
 								</div>
 								<input
 									type="radio"
 									name="attendation"
 									id="cannot"
 								/>
-								<span class="checkmark"></span>
-							</label>
-						</div>
-						<div class="form-field">
-							<label for="dieta">Dieta</label>
-							<label class="radio-container">
-								<div style="padding-top: 2px">Ne</div>
-								<input
-									type="radio"
-									name="diet"
-									id="diet-no"
-									checked="true"
-								/>
-								<span class="checkmark"></span>
-							</label>
-							<label class="radio-container">
-								<div style="padding-top: 2px">Ano</div>
-								<input type="radio" name="diet" id="diet-no" />
 								<span class="checkmark"></span>
 							</label>
 						</div>
@@ -214,13 +200,33 @@
 							</label>
 						</div>
 						<div class="form-field">
-							<label for="dieta">Alkohol, který oceníte</label>
-							<input type="text" />
+							<label for="dieta">Dieta</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Ne</div>
+								<input
+									type="radio"
+									name="diet"
+									id="diet-no"
+									checked="true"
+								/>
+								<span class="checkmark"></span>
+							</label>
+							<label class="radio-container">
+								<div style="padding-top: 2px">Ano</div>
+								<input type="radio" name="diet" id="diet-yes" />
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="form-field">
+							<label for="to-drink">Alkohol, který oceníte</label>
+							<input type="text" name="to-drink" id="drink-preferences-txt" />
 						</div>
 
-						<button id="submit-btn" class="submit-btn">
-							ODESLAT
-						</button>
+						<div class="submit-btn-container">
+							<button id="submit-btn" class="submit-btn">
+								ODESLAT
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>

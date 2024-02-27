@@ -1,25 +1,35 @@
 document.getElementById("submit-btn").addEventListener("click", async (e) => {
 	e.preventDefault();
+
 	let name = document.getElementById("text-name").value;
 	let surname = document.getElementById("text-surname").value;
-	let number_of_other_persons = document.getElementById(
-		"number-of-other-persons"
-	).value;
-	console.log(name, surname, number_of_other_persons);
+	let attendation = document.querySelector('input[id="lunch"]:checked') ? 'oběd' :
+		document.querySelector('input[id="evening"]:checked') ? 'večer' : 'nepřijdu'
+	let portion = document.querySelector('input[id="full"]:checked') ? 'plná' : 'poloviční';
+	let diet = document.querySelector('input[id="diet-yes"]:checked') ? 'ano' : 'ne';
+	let drink = document.getElementById('drink-preferences-txt').value
+		console.log(diet, portion, attendation, drink);
+
+	if (!(name && surname && attendation && portion && diet)){
+		alert('Prosím vyplňte všechna pole!')
+	}
 
 	const url =
-		"https://script.google.com/macros/s/AKfycby1NAuijVsLEOAcxr3bnRv3jbzUT0sskIasrGOG_kzzbe5UtG7aGF1hjNnpGTT-F0Oe/exec?" +
+		"https://script.google.com/macros/s/AKfycbxcV7K3RcFqMiy5MiwSRgSoSfpcKeW1F9tPhTBEmH7nUwkQkPBGNMBHXW52McJi8SKd/exec?" +
 		new URLSearchParams({
 			name: name,
 			surname: surname,
-			number_of_other_persons: number_of_other_persons,
+			attendation: attendation,
+			portion: portion,
+			diet: diet,
+			drink: drink
 		});
 	await fetch(url)
 		.then((response) => response.text())
 		.then((text) => {
 			console.log(text);
-            if (text.toUpperCase() == 'OK'){
-                document.cookie = "claimSent=true"
-            }
+			if (text.toLowerCase() == "ok") {
+				document.cookie = "claimSent=true;SameSite=None";
+			}
 		});
 });

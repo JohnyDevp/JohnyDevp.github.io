@@ -25,6 +25,41 @@ setInterval(() => {
 	}`;
 }, 1000);
 
+// show the popup with ask for registration if the form hasn't been
+// filled on this computer yet
+async function showRegistrationPopup() {
+	// check for the cookie
+	let setCookies = document.cookie;
+	let splittedCookies = setCookies.split("=");
+	console.log(splittedCookies);
+	for (let a in splittedCookies) {
+		if ("claimSent" == splittedCookies[a]) {
+			// when the cookie has been found, then don't show the popup
+			console.log("hey there");
+			return;
+		}
+	}
+
+	await setTimeout(() => {
+		// show the popup by removal of the value none of the display property
+		document.getElementsByClassName(
+			"register-popup-container"
+		)[0].style.display = "";
+		document.getElementsByClassName("content-container")[0].style.display =
+			"";
+	}, 700);
+}
+showRegistrationPopup();
+
+// hide the popup
+function closeRegistrationPopup() {
+	document.getElementsByClassName(
+		"register-popup-container"
+	)[0].style.display = "none";
+	document.getElementsByClassName("content-container")[0].style.display =
+		"none";
+}
+
 // toggle navbar menu animation
 let isMenuOpen = false;
 function toggleMenu() {

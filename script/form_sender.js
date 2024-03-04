@@ -3,15 +3,22 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 
 	let name = document.getElementById("text-name").value;
 	let surname = document.getElementById("text-surname").value;
-	let attendation = document.querySelector('input[id="lunch"]:checked') ? 'oběd' :
-		document.querySelector('input[id="evening"]:checked') ? 'večer' : 'nepřijdu'
-	let portion = document.querySelector('input[id="full"]:checked') ? 'plná' : 'poloviční';
-	let diet = document.querySelector('input[id="diet-yes"]:checked') ? 'ano' : 'ne';
-	let drink = document.getElementById('drink-preferences-txt').value
-		console.log(diet, portion, attendation, drink);
+	let attendation = document.querySelector('input[id="lunch"]:checked')
+		? "oběd"
+		: document.querySelector('input[id="evening"]:checked')
+		? "večer"
+		: "nepřijdu";
+	let portion = document.querySelector('input[id="full"]:checked')
+		? "plná"
+		: "poloviční";
+	let diet = document.querySelector('input[id="diet-yes"]:checked')
+		? "ano"
+		: "ne";
+	let drink = document.getElementById("drink-preferences-txt").value;
+	console.log(diet, portion, attendation, drink);
 
-	if (!(name && surname && attendation && portion && diet)){
-		alert('Prosím vyplňte všechna pole!')
+	if (!(name && surname && attendation && portion && diet)) {
+		alert("Prosím vyplňte všechna pole!");
 	}
 
 	const url =
@@ -22,7 +29,7 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 			attendation: attendation,
 			portion: portion,
 			diet: diet,
-			drink: drink
+			drink: drink,
 		});
 	await fetch(url)
 		.then((response) => response.text())

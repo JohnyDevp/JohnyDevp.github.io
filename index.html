@@ -52,7 +52,7 @@
 						id="tips-btn"
 						onclick="navbarButtonSelected_handler('tips-btn')"
 					>
-						Kam na oběd
+						Tipy v okolí
 					</li>
 					<li
 						id="accomodation-btn"
@@ -91,10 +91,26 @@
 			</div>
 		</div>
 
-		<div class="content-container" style="display: none;">
-			<!-- <div class="test">
-				
-			</div> -->
+		<div class="content-container" style="display: none">
+			<div class="register-popup-container" style="display: none">
+				<div class="register-popup-bg">
+					<div class="register-text">
+						Vítejte na našich svatebních stránkách! Neváhejte s
+						potvrzením účasti! Moc se na Vás těšíme!
+					</div>
+					<input
+						type="button"
+						onclick="navbarButtonSelected_handler('claim-btn')"
+						value="POTVRDIT ÚČAST!"
+					/>
+					<input
+						type="button"
+						onclick="closeRegistrationPopup()"
+						value="ZATÍM NE"
+					/>
+				</div>
+			</div>
+
 			<div
 				class="about-bookmark"
 				id="about-bookmark"
@@ -111,17 +127,24 @@
 			>
 				<div class="gifts-header">Svatební dary</div>
 				<div id="gifts-content" class="gifts-content">
-					Děkujeme a velmi si vážíme Vaší podpory do začátku našeho
-					společného života! <br />
-					Oceníme finanční či věcný dar, na který se můžete zapsat do
+					Pokud rádi dáváte dárky (proti tomuto jazyku lásky
+					samozřejmě nic nemáme* 🤭) a nevíte si rady, jaké by
+					potěšily mladé novomanžele,
 					<div class="gifts-link">
 						<a
 							href="https://docs.google.com/spreadsheets/d/1rtfHs_1D06SpQ5vB934YYOX_GFM20ri5ozZx-RXuRBA/edit?usp=sharing"
 							target="_blank"
 						>
-							<img src="res/excel_icon.png" />tabulky
+							<img src="res/excel_icon.png" />sepsali jsme pár
+							tipů.
 						</a>
 					</div>
+					Pokud si vyberete jeden z nich, prosím, označte, že je dar
+					již zabraný. Dále prosíme, nenoste nám květiny, o ty bude na
+					svatbě postaráno. 🤩💐
+					<br />
+					<br />
+					*viz CHAPMAN, G. (2016). 5 jazyků lásky. Návrat domů.
 				</div>
 			</div>
 
@@ -132,6 +155,12 @@
 			>
 				<div class="claim-header">Potvrzení účasti</div>
 				<div id="claim-content" class="claim-content">
+					<div class="content-text">
+						Formulář pro zvané hosty ke svatebnímu stolu a na večer.
+						Prosím vyplňte potřebné informace. V případě změny
+						vyplňte a odešlete formulář znovu, budeme brát v potaz
+						poslední záznam od vás.
+					</div>
 					<div class="claim-form" id="claim-form">
 						<div class="form-field">
 							<label for="name">Jméno</label>
@@ -219,7 +248,11 @@
 						</div>
 						<div class="form-field">
 							<label for="to-drink">Alkohol, který oceníte</label>
-							<input type="text" name="to-drink" id="drink-preferences-txt" />
+							<input
+								type="text"
+								name="to-drink"
+								id="drink-preferences-txt"
+							/>
 						</div>
 
 						<div class="submit-btn-container">
@@ -251,27 +284,59 @@
 					</li>
 					<li>
 						<div class="program-time">10:30</div>
-						<div class="program-part">Svatební obřad</div>
-					</li>
-					<li>
-						<div class="program-time">12:30</div>
 						<div class="program-part">
-							Oběd pro rodinu a pozvané hosty
+							Svatební obřad se mší svatou
 						</div>
 					</li>
 					<li>
-						<div class="program-time">16:00</div>
+						<div class="program-time"></div>
 						<div class="program-part">
-							Odpolední hostina pro pozvané přátele
+							Společné focení před kostelem
 						</div>
 					</li>
 					<li>
-						<div class="program-time">16:30</div>
-						<div class="program-part">Krájení dortu</div>
+						<div class="program-time"></div>
+						<div class="program-part">
+							přesun ve společné koloně 🚗🚙🚐🏎️🚓 do Lidového
+							domu v Novém Hrozenkově
+						</div>
+					</li>
+					<li>
+						<div class="program-time">13:00</div>
+						<div class="program-part">OBĚD</div>
+					</li>
+					<li>
+						<div class="program-time"></div>
+						<div class="program-part">krájení dortu</div>
+					</li>
+					<li>
+						<div class="program-time"></div>
+						<div class="program-part">
+							první tanec novomanželů (to jsme my 😍)
+						</div>
 					</li>
 					<li>
 						<div class="program-time">17:00</div>
-						<div class="program-part">První tanec</div>
+						<div class="program-part">Příchod kamarádů</div>
+					</li>
+					<li>
+						<div class="program-time"></div>
+						<div class="program-part">Večeře formou rautu</div>
+					</li>
+					<li>
+						<div class="program-time"></div>
+						<div class="program-part">Čepení</div>
+					</li>
+					<li>
+						<div class="program-time"></div>
+						<div class="program-part">Házení kytice</div>
+					</li>
+					<li>
+						<div class="program-time"></div>
+						<div class="program-part">
+							volná zábava až do samého rána (samozřejmě ale tak,
+							abychom byli schopni vstát v neděli na mši 😇)
+						</div>
 					</li>
 					<div class="divider">
 						<img src="./res/divider2_gold.png" />

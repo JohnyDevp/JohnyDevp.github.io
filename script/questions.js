@@ -151,24 +151,24 @@ questions_arr.forEach((item) => {
 	finalHTML += `
     <div class="question-card">
         <div class="question">${item.question}</div>
-        <div class="answer-buttons-box">
-            <label class='radio-container'> Ondra
-                <input type="radio" name="answer${id}" id="ondra${id}" checked='checked'/>
-                <span class="checkmark" id="ondra${id}_checkmark"></span>
-            </label>
-            <label class='radio-container'> Terezka
-                <input type="radio" name="answer${id}" id="terez${id}"/> 
-                <span class="checkmark" id="terez${id}_checkmark"></span>
-            </label>
-            <label class='radio-container'> Oba
-                <input type="radio" name="answer${id}" id="both${id}"/>
-                <span class="checkmark" id="both${id}_checkmark"></span>
-            </label>
-            <label class='radio-container'> Ani jeden
-                <input type="radio" name="answer${id}" id="neither${id}"/> 
-                <span class="checkmark" id="neither${id}_checkmark"></span>
-            </label>
-        </div>
+			<div class="answer-buttons-box">
+				<label class='radio-container'> Ondra
+					<input type="radio" name="answer${id}" id="ondra${id}" checked='checked'/>
+					<span class="checkmark" id="ondra${id}_checkmark"></span>
+				</label>
+				<label class='radio-container'> Terezka
+					<input type="radio" name="answer${id}" id="terez${id}"/> 
+					<span class="checkmark" id="terez${id}_checkmark"></span>
+				</label>
+				<label class='radio-container'> Oba
+					<input type="radio" name="answer${id}" id="both${id}"/>
+					<span class="checkmark" id="both${id}_checkmark"></span>
+				</label>
+				<label class='radio-container'> Ani jeden
+					<input type="radio" name="answer${id}" id="neither${id}"/> 
+					<span class="checkmark" id="neither${id}_checkmark"></span>
+				</label>
+			</div>
         <div class="answer-supplement"></div>
         </div>
     `;

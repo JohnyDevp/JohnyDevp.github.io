@@ -246,6 +246,80 @@
 		/* display: none; */
 	}
 
+	/* REGISTER POPUP */
+	.register-popup-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(163, 160, 157, 0.201);
+
+		z-index: 20;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@keyframes showPopup {
+		0% {
+			transform: translateY(-50vh);
+			opacity: 0%;
+		}
+		50% {
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
+
+	.register-popup-bg {
+		display: grid;
+		width: 50vw;
+		max-width: 200px;
+		padding: 10px;
+		height: 50vh;
+		background-color: #204486;
+		overflow: hidden;
+		border-radius: 15px;
+		animation: ease-in 1s 1 showPopup;
+	}
+
+	.register-text {
+		text-align: center;
+		font-family: "Sitkasmall_italic1";
+		font-size: 200%;
+		color: white;
+		display: grid;
+		justify-self: center;
+		padding-top: 5px;
+	}
+	.register-popup-bg > input[type="button"] {
+		border-radius: 10px;
+		margin: 5px 10px 5px 10px;
+		cursor: pointer;
+		color: white;
+		font-weight: 900;
+		font-size: 120%;
+		font-family: "Sitkasmall_italic1";
+	}
+	.register-popup-bg > input[type="button"]:nth-child(2) {
+		background-color: rgb(125, 94, 161);
+	}
+	.register-popup-bg > input[type="button"]:nth-child(2):hover {
+		background-color: rgb(124, 70, 186);
+		transition: ease-out 0.1s;
+	}
+
+	.register-popup-bg > input[type="button"]:last-child {
+		background-color: rgba(120, 126, 166, 0.435);
+	}
+	.register-popup-bg > input[type="button"]:last-child:hover {
+		background-color: rgba(84, 92, 146, 0.435);
+		transition: ease-out 0.1s;
+	}
+
 	/*ABOUT*/
 	.about-bookmark {
 		margin-top: 100px;
@@ -344,7 +418,7 @@
 	}
 
 	/* CLAIM - FRONT */
-	.test{
+	.test {
 		/* background-color: #204486; */
 		width: 100vw;
 		height: 100vh;

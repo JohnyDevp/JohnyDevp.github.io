@@ -200,21 +200,100 @@
 		align-items: center;
 	}
 
+	/* REGISTER POPUP */
+	.register-popup-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(163, 160, 157, 0.201);
+
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@keyframes showPopup {
+		0% {
+			transform: translateY(-50vh);
+			opacity: 0%;
+		}
+		50% {
+			transform: translateY(0);
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
+
+	.register-popup-bg {
+		display: grid;
+		width: 50vw;
+		max-width: 700px;
+		padding: 10px;
+		height: 200px;
+		background-color: #204486;
+		overflow: hidden;
+		border-radius: 15px;
+		animation: ease-in 1s 1 showPopup;
+	}
+
+	.register-text {
+		text-align: center;
+		font-family: "Sitkasmall_italic1";
+		font-size: 200%;
+		color: white;
+		display: grid;
+		justify-self: center;
+		padding-top: 5px;
+	}
+	.register-popup-bg > input[type="button"] {
+		border-radius: 10px;
+		margin: 5px 10px 5px 10px;
+		cursor: pointer;
+		color: white;
+		font-weight: 900;
+		font-size: 120%;
+		font-family: "Sitkasmall_italic1";
+	}
+	.register-popup-bg > input[type="button"]:nth-child(2) {
+		background-color: rgb(125, 94, 161);
+	}
+	.register-popup-bg > input[type="button"]:nth-child(2):hover {
+		background-color: rgb(124, 70, 186);
+		transition: ease-out 0.1s;
+	}
+
+	.register-popup-bg > input[type="button"]:last-child {
+		background-color: rgba(120, 126, 166, 0.435);
+	}
+	.register-popup-bg > input[type="button"]:last-child:hover {
+		background-color: rgba(84, 92, 146, 0.435);
+		transition: ease-out 0.1s;
+	}
+
 	/* ABOUT */
 	.about-bookmark {
 		margin-top: 100px;
-		margin-bottom: 100px;
+		/* margin-bottom: 100px; */
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 		width: 100vw;
 		overflow-y: scroll;
+		align-items: center;
 	}
 	.about-header {
+		background-color: rgba(89, 45, 106, 0.484);
+		width: fit-content;
+		align-self: center;
+		border-radius: 50px;
+		padding: 5px 20px 5px 20px;
+
 		color: #d1a926;
 		font-size: 450%;
 		margin-top: 20px;
-		/* margin-bottom: 40px; */
 		font-weight: 600;
 		text-align: center;
 	}
@@ -225,8 +304,12 @@
 
 		padding-top: 20px;
 		padding-bottom: 20px;
+		/* margin-left: 20%; */
 		/* width: fit-content; */
-		width: 100vw;
+
+		/* background-color: #204486; */
+
+		width: 60%;
 		height: inherit;
 
 		overflow-x: hidden;
@@ -239,10 +322,28 @@
 		display: none;
 	}
 
+	.radio-container {
+		justify-self: baseline;
+	}
+
+	.answer-buttons-box {
+		width: 100%;
+		display: grid;
+		/* display: flex; */
+		/*flex-direction: column;
+		justify-content: baseline;
+		justify-items: baseline;
+		align-items: baseline;
+		align-content: flex-start; */
+	}
+	.question {
+		display: grid;
+		text-align: center;
+	}
+
 	/* GIFTS */
 	.gifts-bookmark {
 		margin-top: 100px;
-		margin-bottom: 100px;
 		align-items: center;
 		justify-content: center;
 		display: flex;
@@ -252,6 +353,12 @@
 		overflow-y: scroll;
 	}
 	.gifts-header {
+		background-color: rgba(89, 45, 106, 0.484);
+		width: fit-content;
+		align-self: center;
+		border-radius: 50px;
+		padding: 5px 20px 5px 20px;
+
 		color: #d1a926;
 		font-size: 450%;
 		margin-top: 20px;
@@ -290,6 +397,7 @@
 		border-radius: 15px;
 		text-decoration: none;
 		color: black;
+		font-size: 100%;
 		/* font-family: Arial, Helvetica, sans-serif; */
 	}
 	.gifts-link img {
@@ -300,7 +408,6 @@
 	/* CLAIM */
 	.claim-bookmark {
 		margin-top: 100px;
-		margin-bottom: 100px;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -308,10 +415,16 @@
 		overflow-y: scroll;
 	}
 	.claim-header {
+		background-color: rgba(89, 45, 106, 0.484);
+		width: fit-content;
+		align-self: center;
+		border-radius: 50px;
+		padding: 5px 20px 5px 20px;
+
 		color: #d1a926;
 		font-size: 450%;
 		margin-top: 20px;
-		/* margin-bottom: 20px; */
+		/* margin-bottom: 40px; */
 		font-weight: 600;
 		text-align: center;
 	}
@@ -334,6 +447,14 @@
 	.claim-content::-webkit-scrollbar {
 		/* color: red; */
 		display: none;
+	}
+
+	.claim-content > .content-text {
+		font-size: 150%;
+		text-align: center;
+		width: 600px;
+		color: #45484d;
+		font-weight: 900;
 	}
 
 	/* suplement for radio button box from question cards, which is used here */
@@ -376,7 +497,7 @@
 		background-color: unset;
 		border: 2px solid #3b3685;
 		cursor: pointer;
-		
+
 		font-family: "Sitkasmall_italic1";
 		font-size: 20px;
 		font-weight: 900;
@@ -402,6 +523,12 @@
 		overflow-y: scroll;
 	}
 	.program-header {
+		background-color: rgba(89, 45, 106, 0.484);
+		width: fit-content;
+		align-self: center;
+		border-radius: 50px;
+		padding: 5px 20px 5px 20px;
+
 		color: #d1a926;
 		font-size: 450%;
 		margin-top: 20px;
@@ -415,7 +542,7 @@
 		align-items: center;
 
 		padding-top: 20px;
-		padding-bottom: 20px;
+		margin-bottom: 60px;
 		/* width: fit-content; */
 		width: 100vw;
 		height: inherit;
@@ -444,6 +571,10 @@
 	.program-time {
 		text-align: right;
 		padding-right: 40px;
+	}
+
+	.program-part {
+		max-width: 400px;
 	}
 
 	.divider {

@@ -200,6 +200,33 @@
 		align-items: center;
 	}
 
+	/* REGISTER SENT OK POPUP */
+	.claim-sent-ok {
+		/* this is for centering, not best but working ... */
+		left: calc(50vw - 250px);
+		position: absolute;
+		margin-top: 20px;
+		width: 500px;
+		height: 90px;
+		border-radius: 20px;
+
+		background-color: #204486;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		vertical-align: middle;
+
+		font-size: 200%;
+		color: white;
+		transform: translateY(-50vh);
+		transition: ease 0.5s;
+	}
+	.claim-sent-ok > img {
+		margin-right: 20px;
+	}
+
 	/* REGISTER POPUP */
 	.register-popup-container {
 		position: absolute;
@@ -275,7 +302,7 @@
 
 	/* ABOUT */
 	.about-bookmark {
-		margin-top: 100px;
+		margin-top: 50px;
 		/* margin-bottom: 100px; */
 		display: flex;
 		flex-direction: column;
@@ -296,19 +323,23 @@
 		margin-top: 20px;
 		font-weight: 600;
 		text-align: center;
+
+		display: none;
 	}
 	.about-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		padding-top: 20px;
-		padding-bottom: 20px;
-		/* margin-left: 20%; */
-		/* width: fit-content; */
-
+		/* padding-top: 20px; */
+		padding-top: 30px;
+		padding-bottom: 120px;
 		/* background-color: #204486; */
-
+		border-top-left-radius: 300px;
+		border-top-right-radius: 300px;
+		border-bottom-left-radius: 450px;
+		border-bottom-right-radius: 450px;
+		max-width: 800px;
 		width: 60%;
 		height: inherit;
 
@@ -321,20 +352,22 @@
 		/* color: red; */
 		display: none;
 	}
+	.about-content > .content-text {
+		font-size: 180%;
+		text-align: center;
+		width: 450px;
+		/* color: #45484d; */
+		font-weight: 900;
+	}
 
 	.radio-container {
 		justify-self: baseline;
 	}
-
 	.answer-buttons-box {
-		width: 100%;
+		width: 80%;
 		display: grid;
-		/* display: flex; */
-		/*flex-direction: column;
-		justify-content: baseline;
-		justify-items: baseline;
-		align-items: baseline;
-		align-content: flex-start; */
+		position: relative;
+		margin-left: 100px;
 	}
 	.question {
 		display: grid;
@@ -365,17 +398,21 @@
 		/* margin-bottom: 20px; */
 		font-weight: 600;
 		text-align: center;
+		display: none;
 	}
 	.gifts-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		text-align: center;
 
 		padding-top: 20px;
 		padding-bottom: 20px;
+		margin-bottom: 10%;
 		/* width: fit-content; */
 		width: 40vw;
+		max-width: 500px;
 		height: inherit;
 
 		overflow-x: hidden;
@@ -404,10 +441,16 @@
 		width: 20px;
 		margin-right: 10px;
 	}
+	.gifts-content > .cite {
+		margin: 20px;
+		font-size: 60%;
+		color: grey;
+	}
 
 	/* CLAIM */
 	.claim-bookmark {
 		margin-top: 100px;
+		margin-bottom: 100px;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -415,25 +458,20 @@
 		overflow-y: scroll;
 	}
 	.claim-header {
-		background-color: rgba(89, 45, 106, 0.484);
-		width: fit-content;
-		align-self: center;
-		border-radius: 50px;
-		padding: 5px 20px 5px 20px;
-
 		color: #d1a926;
 		font-size: 450%;
 		margin-top: 20px;
-		/* margin-bottom: 40px; */
+		/* margin-bottom: 20px; */
 		font-weight: 600;
 		text-align: center;
+		display: none;
 	}
 	.claim-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		padding-top: 20px;
+		padding-top: 80px;
 		padding-bottom: 20px;
 		/* width: fit-content; */
 		width: 100vw;
@@ -448,11 +486,10 @@
 		/* color: red; */
 		display: none;
 	}
-
 	.claim-content > .content-text {
 		font-size: 150%;
 		text-align: center;
-		width: 600px;
+		width: 450px;
 		color: #45484d;
 		font-weight: 900;
 	}
@@ -464,29 +501,37 @@
 	}
 	.form-field > label {
 		margin-right: 10px;
+		font-size: 25px;
+		/* font-weight: 900; */
 	}
 	.form-field {
 		margin: 10px;
 		font-size: 200%;
 		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		justify-content: left;
+		align-items: start;
 	}
 
 	.form-field > input[type="text"] {
-		font-size: 100%;
+		font-size: 70%;
+		font-family: "Sitkasmall_italic1";
 		border: 0px;
-		background-color: unset;
-		border-bottom: 2px solid #3b3685;
+		width: 80vw;
+		max-width: 500px;
+		text-align: left;
+		border-radius: 10px;
+		padding: 5px;
+		background-color: rgb(255, 255, 255);
+		border: 2px solid #3b3685;
 		outline: unset;
 	}
 	.form-field > input:focus {
-		border-bottom: 2px solid #e6c439;
+		border-bottom: 3px solid #e6c439;
 	}
 
 	.submit-btn-container {
-		margin-top: 70px;
+		margin-top: 20px;
 		display: grid;
 		justify-content: center;
 		align-content: center;
@@ -496,6 +541,7 @@
 		height: 40px;
 		background-color: unset;
 		border: 2px solid #3b3685;
+		border-radius: 10px;
 		cursor: pointer;
 
 		font-family: "Sitkasmall_italic1";
@@ -509,7 +555,7 @@
 		padding-top: 5px;
 	}
 	.submit-btn:hover {
-		background-color: #204486;
+		background-color: #3b3685;
 		color: white;
 	}
 
@@ -535,6 +581,8 @@
 		/* margin-bottom: 40px; */
 		font-weight: 600;
 		text-align: center;
+
+		display: none;
 	}
 	.program-content {
 		display: flex;
@@ -542,7 +590,7 @@
 		align-items: center;
 
 		padding-top: 20px;
-		margin-bottom: 60px;
+		margin-bottom: 150px;
 		/* width: fit-content; */
 		width: 100vw;
 		height: inherit;
@@ -561,7 +609,7 @@
 		margin: 20px 0px 10px 0px;
 		list-style: none;
 		display: grid;
-		grid-template-columns: 50vw 50vw;
+		grid-template-columns: 40vw 50vw;
 		text-decoration: none;
 		color: #3b3685;
 		font-weight: 900;
@@ -579,9 +627,10 @@
 
 	.divider {
 		justify-content: center;
+		filter: saturate(20);
 	}
 
 	.divider > img {
-		width: 300px;
+		width: 400px;
 	}
 }

@@ -178,7 +178,7 @@ questions_arr.forEach((item) => {
 finalHTML += `
 	<button class="show-answers-btn" onclick='showAnswers()' name="Ukázat správné odpovědi"/>Ukázat správné odpovědi</button>
 `;
-document.getElementById("about-content").innerHTML = finalHTML;
+document.getElementById("about-content").innerHTML += finalHTML;
 
 function showAnswers() {
 	let questions_cards_divs = document.getElementsByClassName("question-card");

@@ -444,13 +444,14 @@
 		/* margin-bottom: 20px; */
 		font-weight: 600;
 		text-align: center;
+		display: none;
 	}
 	.claim-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		padding-top: 20px;
+		padding-top: 7vh;
 		padding-bottom: 20px;
 		/* width: fit-content; */
 		width: 100vw;
@@ -464,6 +465,14 @@
 	.claim-content::-webkit-scrollbar {
 		/* color: red; */
 		display: none;
+	}
+	.claim-content > .content-text {
+		font-size: 150%;
+		text-align: center;
+		width: 90vw;
+		max-width: 440px;
+		color: #45484d;
+		font-weight: 900;
 	}
 
 	/* suplement for radio button box from question cards, which is used here */

@@ -3,7 +3,7 @@ const questions_arr = [
 	{
 		question: "Kdo má více sourozenců?",
 		answer: "neither",
-		suplement: "Oba mají 4.",
+		suplement: "Oba mají 4",
 	},
 	{
 		question: "Kdo je starší?",

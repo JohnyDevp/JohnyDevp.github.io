@@ -490,7 +490,6 @@
 		font-size: 150%;
 		text-align: center;
 		width: 450px;
-		color: #45484d;
 		font-weight: 900;
 	}
 
@@ -547,7 +546,8 @@
 		font-family: "Sitkasmall_italic1";
 		font-size: 20px;
 		font-weight: 900;
-		color: #3b3685;
+		color: white;
+		background-color: #204486;
 
 		text-align: center;
 		vertical-align: middle;
@@ -555,7 +555,7 @@
 		padding-top: 5px;
 	}
 	.submit-btn:hover {
-		background-color: #3b3685;
+		background-color: #5f5aa1;
 		color: white;
 	}
 

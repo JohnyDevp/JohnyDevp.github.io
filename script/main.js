@@ -89,6 +89,8 @@ function toggleMenu() {
 
 // animation of selected navbar button
 function navbarButtonSelected_handler(btn_id) {
+	// just restart content of info, tips and accommodation bookmarks
+	
 	let current_btn = document.getElementById(btn_id);
 	// get all buttons and remove the activie class from them
 	let all_btns = document.getElementsByTagName("li");
@@ -127,4 +129,43 @@ function navbarButtonSelected_handler(btn_id) {
 		});
 	document.getElementsByClassName("mainpage-body")[0].style.visibility =
 		"hidden";
+}
+
+let currentActiveBtn = null;
+function changeInfoContent_btnClick(btn_id) {
+	let info_btn = document.getElementById("ib-info-btn");
+	let contacts_btn = document.getElementById("ib-contacts-btn");
+	let ib_info_content = document.getElementById("ib-info");
+	let ib_contacts_content = document.getElementById("ib-contacts");
+	let ib_intro_content = document.getElementById("ib-intro");
+	console.log(currentActiveBtn);
+	switch (btn_id) {
+		case "info":
+			if (currentActiveBtn == "info") break;
+
+			info_btn.className += " btn-active ";
+			ib_info_content.style.display = "";
+
+			ib_intro_content.style.display = "none";
+			ib_contacts_content.style.display = "none";
+			contacts_btn.className = contacts_btn.className.replace(
+				" btn-active ",
+				""
+			);
+			console.log("ahoj");
+			break;
+		case "contacts":
+			if (currentActiveBtn == "contacts") break;
+
+			contacts_btn.className += " btn-active ";
+			ib_contacts_content.style.display = "";
+
+			ib_intro_content.style.display = "none";
+			ib_info_content.style.display = "none";
+			info_btn.className = info_btn.className.replace(" btn-active ", "");
+			break;
+		default:
+			break;
+	}
+	currentActiveBtn = btn_id;
 }

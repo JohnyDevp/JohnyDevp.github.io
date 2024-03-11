@@ -90,7 +90,7 @@ function toggleMenu() {
 // animation of selected navbar button
 function navbarButtonSelected_handler(btn_id) {
 	// just restart content of info, tips and accommodation bookmarks
-	
+
 	let current_btn = document.getElementById(btn_id);
 	// get all buttons and remove the activie class from them
 	let all_btns = document.getElementsByTagName("li");
@@ -131,15 +131,36 @@ function navbarButtonSelected_handler(btn_id) {
 		"hidden";
 }
 
-let currentActiveBtn = null;
+document.getElementById("ib-intro-btn").className += " btn-active ";
+let currentActiveBtn = "intro";
 function changeInfoContent_btnClick(btn_id) {
 	let info_btn = document.getElementById("ib-info-btn");
 	let contacts_btn = document.getElementById("ib-contacts-btn");
+	let intro_btn = document.getElementById("ib-intro-btn");
+
 	let ib_info_content = document.getElementById("ib-info");
 	let ib_contacts_content = document.getElementById("ib-contacts");
 	let ib_intro_content = document.getElementById("ib-intro");
-	console.log(currentActiveBtn);
+	
 	switch (btn_id) {
+		case "intro":
+			if (currentActiveBtn == "intro") break;
+
+			intro_btn.className += " btn-active ";
+			ib_intro_content.style.display = "";
+
+			ib_info_content.style.display = "none";
+			ib_contacts_content.style.display = "none";
+			contacts_btn.className = contacts_btn.className.replace(
+				" btn-active ",
+				""
+			);
+			info_btn.className = intro_btn.className.replace(
+				" btn-active ",
+				""
+			);
+
+			break;
 		case "info":
 			if (currentActiveBtn == "info") break;
 
@@ -152,7 +173,11 @@ function changeInfoContent_btnClick(btn_id) {
 				" btn-active ",
 				""
 			);
-			console.log("ahoj");
+			intro_btn.className = intro_btn.className.replace(
+				" btn-active ",
+				""
+			);
+
 			break;
 		case "contacts":
 			if (currentActiveBtn == "contacts") break;
@@ -163,6 +188,10 @@ function changeInfoContent_btnClick(btn_id) {
 			ib_intro_content.style.display = "none";
 			ib_info_content.style.display = "none";
 			info_btn.className = info_btn.className.replace(" btn-active ", "");
+			intro_btn.className = intro_btn.className.replace(
+				" btn-active ",
+				""
+			);
 			break;
 		default:
 			break;

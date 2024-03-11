@@ -88,31 +88,8 @@
 	transition: ease-in 0.2s;
 }
 
-/* ====================================================== */
-/* for laptop design */
-/* ====================================================== */
-@media (min-width: 1080px) {
-	.question-card {
-		width: 100%;
-		
-		display: grid;
-		/* justify-content: center;
-		align-items: center;
-		text-align: center; */
-		font-size: 200%;
-	}
-}
-
-/* ====================================================== */
-/* for mobile design */
-/* ====================================================== */
-@media only screen and (max-width: 1080px) /*(orientation: portrait) */ {
-	.question-card {
-		display: grid;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-
-		font-size: 200%;
-	}
+.question-card {
+	width: 100%;
+	display: grid;
+	font-size: 200%;
 }

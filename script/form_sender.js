@@ -36,11 +36,16 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 		.then((text) => {
 			console.log(text);
 			if (text.toLowerCase() == "ok") {
-				document.getElementsByClassName("claim-sent-ok")[0].style.transform = "translateY(0)";
+				document.getElementsByClassName(
+					"claim-sent-ok"
+				)[0].style.transform = "translateY(0)";
 				setTimeout(() => {
-					document.getElementsByClassName("claim-sent-ok")[0].style.transform = "translateY(-50vh)";
+					document.getElementsByClassName(
+						"claim-sent-ok"
+					)[0].style.transform = "translateY(-50vh)";
 				}, 2000);
-				document.cookie = "claimSent=true;SameSite=None";
+				document.cookie = "claimSent=true;SameSite=Strict";
+				console.log(document.cookie);
 			}
 		});
 });

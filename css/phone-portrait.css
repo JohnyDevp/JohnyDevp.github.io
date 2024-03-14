@@ -240,10 +240,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 100vh;
-
-		position: absolute;
-		top: 0;
-		/* display: none; */
 	}
 
 	/* REGISTER SENT OK POPUP */
@@ -577,7 +573,6 @@
 		font-size: 60%;
 		color: grey;
 	}
-
 
 	/* CLAIM */
 	.claim-bookmark {

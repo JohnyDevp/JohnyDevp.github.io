@@ -18,7 +18,7 @@
 		overflow: hidden;
 		/* background-color: #183263da; */
 		font-family: "SitkaSmall_italic1";
-		position:relative;
+		position: relative;
 	}
 
 	/**********MENUICON AND NAVBAR**********/
@@ -242,10 +242,6 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 100vh;
-
-		position: absolute;
-		top: 0;
-		/* display: none; */
 	}
 
 	/* REGISTER SENT OK POPUP */
@@ -363,7 +359,7 @@
 
 		overflow-x: hidden;
 		overflow-y: scroll;
-		align-items: center;		
+		align-items: center;
 
 		border-radius: 50%;
 		height: 88vh;
@@ -428,6 +424,7 @@
 		align-items: center;
 		justify-content: center;
 
+		overflow-wrap: anywhere;
 		font-size: 200%;
 	}
 	.info-text-container > ul {
@@ -453,7 +450,7 @@
 
 		overflow-x: hidden;
 		overflow-y: scroll;
-		align-items: center;		
+		align-items: center;
 
 		border-radius: 50%;
 		height: 88vh;
@@ -495,7 +492,7 @@
 		text-align: center;
 		width: inherit;
 		font-weight: 900;
-		
+
 		max-width: 80vw;
 
 		padding-bottom: 10px;
@@ -523,7 +520,7 @@
 
 		overflow-x: hidden;
 		overflow-y: scroll;
-		align-items: center;		
+		align-items: center;
 
 		border-radius: 50%;
 		height: 88vh;
@@ -578,7 +575,6 @@
 		color: grey;
 	}
 
-
 	/* CLAIM */
 	.claim-bookmark {
 		display: flex;
@@ -588,13 +584,11 @@
 
 		overflow-x: hidden;
 		overflow-y: scroll;
-		align-items: center;		
+		align-items: center;
 
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
-
-
 	}
 	.claim-header {
 		color: #d1a926;
@@ -700,7 +694,7 @@
 
 		overflow-x: hidden;
 		overflow-y: scroll;
-		align-items: center;		
+		align-items: center;
 
 		border-radius: 50%;
 		height: 88vh;
@@ -770,7 +764,7 @@
 
 		overflow-x: hidden;
 		overflow-y: scroll;
-		align-items: center;		
+		align-items: center;
 
 		border-radius: 50%;
 		height: 88vh;

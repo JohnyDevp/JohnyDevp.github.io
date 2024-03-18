@@ -4,11 +4,24 @@
 		padding: 0;
 		margin: 0;
 		font-family: "SitkaSmall_italic1";
-        background-color: #204486;
 	}
 
-
 	.background-container {
-        display: none;
+		display: none;
+	}
+
+	.background-for-landscape {
+		display: inline;
+		z-index: -20;
+		position: absolute;
+
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+	}
+
+	.background-for-landscape > img {
+		height: 100vh;
+		width: 100vw;
 	}
 }

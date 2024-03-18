@@ -1,3 +1,7 @@
+.background-for-landscape {
+	display: none;
+}
+
 @media (min-width: 1080px) {
 	/******************* MASTER SETUP *********************/
 	html,
@@ -190,14 +194,13 @@
 		background-color: rgba(240, 248, 255, 0.199);
 		width: 100%;
 
-
 		margin-top: 5px;
 
 		background-image: url(./../res/circlever_wbg.png);
 		/*background-position: center;*/
 		background-repeat: no-repeat;
 		/*background-attachment: fixed;*/
-		background-position: center; 
+		background-position: center;
 		/*background-size: auto 100%;*/
 
 		/* background-size: 1200px; */
@@ -330,7 +333,6 @@
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
-
 	}
 	.info-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -360,10 +362,6 @@
 
 		font-family: "SitkaSmall_italic1"; */
 
-
-
-
-		
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -373,16 +371,13 @@
 
 		/* height: 88vh; */
 		width: 80vh;
-		height:inherit;
+		height: inherit;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 
 		font-family: "SitkaSmall_italic1";
 		/* border-style:solid; */
-
-
-
 	}
 	.info-content::-webkit-scrollbar {
 		/* color: red; */
@@ -436,7 +431,7 @@
 	.info-text-container > ul {
 		margin: 0;
 		padding: 0;
-		
+
 		padding-inline-start: 0px;
 	}
 	.info-text-container li {
@@ -460,7 +455,7 @@
 		/* height: 100%;
 		width: 100vw;
 		overflow-x:hidden;
-		overflow-y: scroll; */		
+		overflow-y: scroll; */
 		/*margin: 14%;*/
 		/* border-style: solid; */
 
@@ -476,7 +471,6 @@
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
-
 	}
 	.about-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -546,7 +540,7 @@
 		width: 450px;
 		/* color: #45484d; */
 		font-weight: 900;
-		
+
 		padding-bottom: 10px;
 	}
 
@@ -578,9 +572,6 @@
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
-
-
-
 
 		/* margin-top: 100px;
 		align-items: center;*/
@@ -629,10 +620,6 @@
 
 		font-family: "SitkaSmall_italic1";
 
-
-
-
-
 		/* display: flex;
 		flex-direction: column;
 		align-items: center; */
@@ -680,7 +667,7 @@
 
 	/* CLAIM */
 	.claim-bookmark {
-/* 
+		/* 
 		margin-top: 50px;
 		display: flex;
 		flex-direction: column;
@@ -688,7 +675,6 @@
 		width: 100vw;
 		overflow-y: scroll;
 		align-items: center; */
-
 
 		display: flex;
 		flex-direction: column;
@@ -702,10 +688,6 @@
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
-
-
-
-
 
 		/*margin-top: 100px;
 		margin-bottom: 100px;
@@ -754,7 +736,7 @@
 		text-align: center;
 		width: 450px;
 		font-weight: 900;
-		
+
 		padding-bottom: 10px;
 	}
 
@@ -833,8 +815,6 @@
 		height: 88vh;
 		width: 88vh;
 
-
-
 		/* margin-top: 50px;
 		display: flex;
 		flex-direction: column;
@@ -880,11 +860,6 @@
 
 		font-family: "SitkaSmall_italic1";
 
-
-
-
-
-
 		/* display: flex;
 		flex-direction: column;
 		align-items: center; */
@@ -901,7 +876,6 @@
 		border-radius: 50%;
 		height: 75%;
 		aspect-ratio: 1.25 / 1; */
-
 
 		/* overflow-x: hidden;
 		overflow-y: scroll;

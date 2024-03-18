@@ -1,7 +1,7 @@
 // remaining time count animation
 let counter = document.getElementById("timer");
 setInterval(() => {
-	let diff = (new Date(2024, 7, 13, 1, 0, 0) - Date.now()) / 1000;
+	let diff = (new Date(2024, 6, 13, 10, 30, 0) - Date.now()) / 1000;
 	let days = Math.floor(diff / (60 * 60 * 24));
 	let hours = Math.floor((diff % (60 * 60 * 24)) / (60 * 60));
 	let minutes = Math.floor((diff % (60 * 60)) / 60);

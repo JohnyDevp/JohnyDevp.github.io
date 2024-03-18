@@ -122,6 +122,7 @@
 		display: grid;
 		height: calc(100% - 70px);
 		min-height: fit-content;
+		margin-top: 5px;
 	}
 
 	.mainpage-body {
@@ -189,9 +190,16 @@
 		background-color: rgba(240, 248, 255, 0.199);
 		width: 100%;
 
+
+		margin-top: 5px;
+
 		background-image: url(./../res/circlever_wbg.png);
-		background-position: center;
+		/*background-position: center;*/
 		background-repeat: no-repeat;
+		/*background-attachment: fixed;*/
+		background-position: center; 
+		/*background-size: auto 100%;*/
+
 		/* background-size: 1200px; */
 		background-size: 100vh;
 
@@ -302,27 +310,43 @@
 
 	/* INFO */
 	.info-bookmark {
-		margin-top: 50px;
-		/* margin-bottom: 100px; */
-		display: flex;
+		/* margin-top: 50px; */
+		/* display: flex;
 		flex-direction: column;
 		height: 100%;
 		width: 100vw;
 		overflow-y: scroll;
+		align-items: center; */
+
+		display: flex;
+		flex-direction: column;
 		align-items: center;
+
+		position: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+		border-radius: 50%;
+		height: 88vh;
+		width: 88vh;
+
+	}
+	.info-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 	.info-header {
 		margin-top: 3%;
 	}
 	.info-content {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		/* padding-top: 20px; */
+
 		padding-top: 30px;
 		padding-bottom: 120px;
-		/* background-color: #204486; */
 		border-top-left-radius: 300px;
 		border-top-right-radius: 300px;
 		border-bottom-left-radius: 450px;
@@ -334,7 +358,31 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 
+		font-family: "SitkaSmall_italic1"; */
+
+
+
+
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-top: 10%;
+		padding-bottom: 15%;
+
+		/* height: 88vh; */
+		width: 80vh;
+		height:inherit;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
 		font-family: "SitkaSmall_italic1";
+		/* border-style:solid; */
+
+
+
 	}
 	.info-content::-webkit-scrollbar {
 		/* color: red; */
@@ -342,7 +390,7 @@
 	}
 
 	.info-navbar {
-		margin-top: 3%;
+		margin-top: 15%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -370,14 +418,17 @@
 	}
 
 	.info-text-container {
-		margin: 0px 30px 0px 0px;
+		margin: 0px 30px 30px 30px;
+		/* padding-bottom: 25%; */
 		display: grid;
 		text-align: center;
 		align-items: center;
 		justify-content: center;
 		/* background-color: #496394; */
 		width: inherit;
-		height: 70%;
+		/* max-width: 80vw; */
+		/* width: 80vh; */
+		/* height: 70%; */
 
 		font-size: 200%;
 	}
@@ -385,6 +436,8 @@
 	.info-text-container > ul {
 		margin: 0;
 		padding: 0;
+		
+		padding-inline-start: 0px;
 	}
 	.info-text-container li {
 		list-style: none;
@@ -401,14 +454,33 @@
 
 	/* ABOUT */
 	.about-bookmark {
-		margin-top: 50px;
+		/* position: bottom; */
+		/*margin-top: 5px;*/
 		/* margin-bottom: 100px; */
+		/* height: 100%;
+		width: 100vw;
+		overflow-x:hidden;
+		overflow-y: scroll; */		
+		/*margin: 14%;*/
+		/* border-style: solid; */
+
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		width: 100vw;
+		align-items: center;
+
+		position: center;
+
+		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
+		border-radius: 50%;
+		height: 88vh;
+		width: 88vh;
+
+	}
+	.about-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 	.about-header {
 		background-color: rgba(89, 45, 106, 0.484);
@@ -426,22 +498,38 @@
 		display: none;
 	}
 	.about-content {
+		/* padding-top: 20px; */
+		/*margin-bottom: 2%;
+		margin-top: 2%;*/
+		/* margin: 1%; */
+
+		/* background-color: #204486; */
+		/* border-radius: 50%; */
+		/*border-top-left-radius: 300px;
+		border-top-right-radius: 300px;
+		border-bottom-left-radius: 450px;
+		border-bottom-right-radius: 450px;*/
+		/*max-width: 800px;
+		width: 60%;*/
+		/*width: inherit;
+		height: inherit;*/
+		/*size: auto 90%;*/
+		/*height: 90%;*/
+		/*aspect-ratio: 1 / 1;*/
+
+		/* border-style: solid; */
+		/*position: center;*/
+
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		/* padding-top: 20px; */
-		padding-top: 3%;
-		padding-bottom: 120px;
+		padding-top: 10%;
+		padding-bottom: 15%;
 
-		/* background-color: #204486; */
-		border-top-left-radius: 300px;
-		border-top-right-radius: 300px;
-		border-bottom-left-radius: 450px;
-		border-bottom-right-radius: 450px;
-		max-width: 800px;
-		width: 60%;
-		height: inherit;
+		height: 88vh;
+		width: 80vh;
+		max-width: 80vw;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -458,6 +546,8 @@
 		width: 450px;
 		/* color: #45484d; */
 		font-weight: 900;
+		
+		padding-bottom: 10px;
 	}
 
 	.radio-container {
@@ -476,14 +566,34 @@
 
 	/* GIFTS */
 	.gifts-bookmark {
-		margin-top: 100px;
-		align-items: center;
-		justify-content: center;
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+		border-radius: 50%;
+		height: 88vh;
+		width: 88vh;
+
+
+
+
+		/* margin-top: 100px;
+		align-items: center;*/
+		justify-content: center;
+		/* display: flex;
 		flex-direction: column;
 		height: 100%;
 		width: 100vw;
-		overflow-y: scroll;
+		overflow-y: scroll; */
+	}
+	.gifts-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 	.gifts-header {
 		background-color: rgba(89, 45, 106, 0.484);
@@ -507,18 +617,39 @@
 		justify-content: center;
 		text-align: center;
 
-		padding-top: 20px;
-		padding-bottom: 20px;
-		margin-bottom: 10%;
-		/* width: fit-content; */
-		width: 40vw;
-		max-width: 500px;
-		height: inherit;
+		padding-top: 10%;
+		padding-bottom: 15%;
+
+		height: 88vh;
+		width: 80vh;
+		max-width: 80vw;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 
 		font-family: "SitkaSmall_italic1";
+
+
+
+
+
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+		/* text-align: center; */
+
+		/* padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 10%; */
+		/* width: fit-content; */
+		/* width: 40vw;
+		max-width: 500px;
+		height: inherit; */
+
+		/* overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1"; */
 		font-size: 200%;
 	}
 	.gifts-content::-webkit-scrollbar {
@@ -538,7 +669,7 @@
 		/* font-family: Arial, Helvetica, sans-serif; */
 	}
 	.gifts-link img {
-		width: 20px;
+		max-height: 40px;
 		margin-right: 10px;
 	}
 	.gifts-content > .cite {
@@ -549,13 +680,44 @@
 
 	/* CLAIM */
 	.claim-bookmark {
-		margin-top: 100px;
-		margin-bottom: 100px;
+/* 
+		margin-top: 50px;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 		width: 100vw;
 		overflow-y: scroll;
+		align-items: center; */
+
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+		border-radius: 50%;
+		height: 88vh;
+		width: 88vh;
+
+
+
+
+
+		/*margin-top: 100px;
+		margin-bottom: 100px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100vw;
+		overflow-y: scroll;*/
+	}
+	.claim-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 	.claim-header {
 		color: #d1a926;
@@ -571,11 +733,12 @@
 		flex-direction: column;
 		align-items: center;
 
-		padding-top: 80px;
-		padding-bottom: 20px;
-		/* width: fit-content; */
-		width: 100vw;
-		height: inherit;
+		padding-top: 10%;
+		padding-bottom: 15%;
+
+		height: 88vh;
+		width: 80vh;
+		max-width: 80vw;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -587,10 +750,12 @@
 		display: none;
 	}
 	.claim-content > .content-text {
-		font-size: 150%;
+		font-size: 180%;
 		text-align: center;
 		width: 450px;
 		font-weight: 900;
+		
+		padding-bottom: 10px;
 	}
 
 	/* suplement for radio button box from question cards, which is used here */
@@ -655,12 +820,32 @@
 
 	/* PROGRAM */
 	.program-bookmark {
-		margin-top: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+		border-radius: 50%;
+		height: 88vh;
+		width: 88vh;
+
+
+
+		/* margin-top: 50px;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 		width: 100vw;
 		overflow-y: scroll;
+		align-items: center; */
+	}
+	.program-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 	.program-header {
 		background-color: rgba(89, 45, 106, 0.484);
@@ -683,16 +868,45 @@
 		flex-direction: column;
 		align-items: center;
 
-		padding-top: 20px;
-		margin-bottom: 150px;
-		/* width: fit-content; */
-		width: 100vw;
-		height: inherit;
+		padding-top: 10%;
+		padding-bottom: 15%;
+
+		height: 88vh;
+		width: 80vh;
+		max-width: 80vw;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 
 		font-family: "SitkaSmall_italic1";
+
+
+
+
+
+
+		/* display: flex;
+		flex-direction: column;
+		align-items: center; */
+
+		/*padding-top: 20px;
+		margin-bottom: 150px;*/
+		/* width: fit-content; */
+		/*width: 100vw;
+		height: inherit;*/
+
+		/* padding-top: 5%;
+		padding-bottom: 10%;
+		margin-bottom: 1%;
+		border-radius: 50%;
+		height: 75%;
+		aspect-ratio: 1.25 / 1; */
+
+
+		/* overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1"; */
 	}
 	.program-content::-webkit-scrollbar {
 		/* color: red; */
@@ -703,7 +917,7 @@
 		margin: 20px 0px 10px 0px;
 		list-style: none;
 		display: grid;
-		grid-template-columns: 40vw 50vw;
+		grid-template-columns: 45vw 55vw;
 		text-decoration: none;
 		color: #3b3685;
 		font-weight: 900;
@@ -726,5 +940,64 @@
 
 	.divider > img {
 		width: 400px;
+	}
+
+	/* TIPS */
+	.tips-bookmark {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+		border-radius: 50%;
+		height: 88vh;
+		width: 88vh;
+
+		justify-content: center;
+	}
+	.tips-bookmark::-webkit-scrollbar {
+		display: none;
+	}
+	.tips-header {
+		background-color: rgba(89, 45, 106, 0.484);
+		width: fit-content;
+		align-self: center;
+		border-radius: 50px;
+		padding: 5px 20px 5px 20px;
+
+		color: #d1a926;
+		font-size: 450%;
+		margin-top: 20px;
+		font-weight: 600;
+		text-align: center;
+		display: none;
+	}
+	.tips-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		padding-top: 10%;
+		padding-bottom: 15%;
+
+		height: 88vh;
+		width: 80vh;
+		max-width: 80vw;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+		font-size: 200%;
+	}
+	.tips-content::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 }

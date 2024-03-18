@@ -1,19 +1,19 @@
 // load questions into the html file
 const questions_arr = [
 	{
-		question: "Kdo má více sourozenců?",
-		answer: "neither",
-		suplement: "Oba mají 4",
-	},
-	{
 		question: "Kdo je starší?",
 		answer: "terez",
 		suplement: "",
 	},
 	{
+		question: "Kdo má více sourozenců?",
+		answer: "neither",
+		suplement: "Oba mají 4",
+	},
+	{
 		question: "Kdo chodí spát a vstává v rozumný čas (když je volno)?",
-		answer: "terez",
-		suplement: "Terez 22:00-7:00, Ondra 0:30-9:00",
+		answer: "both",
+		suplement: "Terez 22:00-7:00, Ondra 0:30-9:00 😴",
 	},
 	{
 		question: "Kdo je trpělivější?",
@@ -88,8 +88,8 @@ const questions_arr = [
 	},
 	{
 		question: "Kdo raději chodí na plavecký bazén?",
-		answer: "terez",
-		suplement: "Terez chodí plavat. Ondra raději saunu ;)",
+		answer: "both",
+		suplement: "Terezka kvůli plavání 🏊, Ondra kvůli parní sauně 🫠",
 	},
 	{
 		question: "Kdo rád žehlí?",
@@ -99,7 +99,7 @@ const questions_arr = [
 	{
 		question: "Kdo rád uklízí?",
 		answer: "both",
-		suplement: "Ondra tím rád prokrastinuje :D",
+		suplement: "Ondra tím rád prokrastinuje 🤫",
 	},
 	{
 		question: "Kdo umí lépe šít?",
@@ -110,7 +110,7 @@ const questions_arr = [
 		question: "Čí plyšáci nemluví?",
 		answer: "both",
 		suplement:
-			"Terezčini plyšáci mluvili do doby, než začala chodit s Ondrou. Pak ale pro dobro jejich vztahu umlkli...",
+			"Terezčini plyšáci mluvili do doby, než začala chodit s Ondrou. Pak ale pro dobro jejich vztahu umlkli... 🤐",
 	},
 	{
 		question: "U koho je tabulka s odpočtem dní do svatby?",
@@ -131,7 +131,7 @@ const questions_arr = [
 	{
 		question: "Kdo byl častěji odmítnut jako dárce krve?",
 		answer: "terez",
-		suplement: "...málo železa😔",
+		suplement: "...málo železa 😔",
 	},
 	{
 		question: "Komu nedělá problém vypít 5 panáků slivovice při degustaci?",
@@ -139,12 +139,28 @@ const questions_arr = [
 		suplement: "",
 	},
 	{
-		question: "Kdo má více větších úrazů?",
+		question: "Kdo po otřesu mozku viděl hlemýždě na stěně?",
 		answer: "terez",
-		suplement: "",
+		suplement: "🐌",
+	},
+	{
+		question: "Kdo chodil v dětství do folklorního tanečního souboru?",
+		answer: "both",
+		suplement: "Terezka do Valášku, Ondra do Opavičky",
+	},
+	{
+		question: "Kdo se objevil v televizi?",
+		answer: "ondra",
+		suplement: "Hledejte v archivu pořadu Šikulové ✂️",
+	},
+	{
+		question: "A poslední otázka.. Kdo se více těší na svatbu?",
+		answer: "both",
+		suplement: "💗💖",
 	},
 ];
 
+// <input type="radio" name="answer${id}" id="ondra${id}" checked='checked'/>
 finalHTML = "";
 let id = 0;
 questions_arr.forEach((item) => {
@@ -153,7 +169,7 @@ questions_arr.forEach((item) => {
         <div class="question">${item.question}</div>
 			<div class="answer-buttons-box">
 				<label class='radio-container'> Ondra
-					<input type="radio" name="answer${id}" id="ondra${id}" checked='checked'/>
+					<input type="radio" name="answer${id}" id="ondra${id}"/>
 					<span class="checkmark" id="ondra${id}_checkmark"></span>
 				</label>
 				<label class='radio-container'> Terezka
@@ -165,7 +181,7 @@ questions_arr.forEach((item) => {
 					<span class="checkmark" id="both${id}_checkmark"></span>
 				</label>
 				<label class='radio-container'> Ani jeden
-					<input type="radio" name="answer${id}" id="neither${id}"/> 
+					<input type="radio" name="answer${id}" id="neither${id}" checked='checked'/> 
 					<span class="checkmark" id="neither${id}_checkmark"></span>
 				</label>
 			</div>
@@ -176,9 +192,17 @@ questions_arr.forEach((item) => {
 });
 
 finalHTML += `
-	<button class="show-answers-btn" onclick='showAnswers()' name="Ukázat správné odpovědi"/>Ukázat správné odpovědi</button>
+	<button class="show-answers-btn" onclick='showAnswers(); this.disabled = true;' name="Ukázat správné odpovědi"/>Ukázat správné odpovědi</button>
 `;
 document.getElementById("about-content").innerHTML += finalHTML;
+
+
+// var radioButtons = document.getElementsByClassName("your class name");
+// for(var i=0;i<radioButtons.length;i++) {
+//    radioButtons[i].disabled = true;
+// }
+
+
 
 function showAnswers() {
 	let questions_cards_divs = document.getElementsByClassName("question-card");
@@ -202,6 +226,9 @@ function showAnswers() {
 					if (questions_arr[q_id].suplement)
 						radio_containers[rad_id].innerHTML +=
 							" - " + questions_arr[q_id].suplement;
+						radio_containers[rad_id].querySelectorAll("input")[0].checked = "checked";
+						radio_containers[rad_id].querySelectorAll("input")[0].disabled = "true";
+						// radio_input.checked = "checked";
 				} else {
 					radio_design.style.backgroundColor = "red";
 				}
@@ -214,10 +241,13 @@ function showAnswers() {
 					if (questions_arr[q_id].suplement)
 						radio_containers[rad_id].innerHTML +=
 							" - " + questions_arr[q_id].suplement;
+						radio_containers[rad_id].querySelectorAll("input")[0].disabled = "true";
 				} else {
 					radio_design.style.backgroundColor = "";
 				}
 			}
+			radio_input.disabled = true;
+			// radio_input.checked = "checked";
 		}
 	}
 }

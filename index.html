@@ -59,12 +59,12 @@
 					>
 						Tipy v okolí
 					</li>
-					<li
+					<!-- <li
 						id="accomodation-btn"
 						onclick="navbarButtonSelected_handler('accomodation-btn')"
 					>
 						Ubytování
-					</li>
+					</li> -->
 				</ul>
 				<div class="design-line"></div>
 			</div>
@@ -182,8 +182,8 @@
 									svatební den pak bude pro pozvané na oběd a
 									večer pokračovat v sále Lidového domů v
 									Novém Hrozenkově. Svá vozidla můžete nechat
-									na nejbližších parkovištích, viz přiložena
-									mapa.
+									na nejbližších parkovištích, vizte přiloženou
+									mapku.
 								</div>
 							</li>
 						</ul>
@@ -194,8 +194,11 @@
 						id="ib-contacts"
 						style="display: none"
 					>
-						V případě jakýchkoliv dotazů kontaktujte naše svědky
-						Honzu Holáně (holan.jan[at]outlook.com, 733244404) a Aničku Martinákovou ✉️🐦
+						V případě jakýchkoliv dotazů kontaktujte naše svědky<br>
+						Honzu Holáně<br>(📧 holan.jan[at]outlook.com,
+						☎️ 733&nbsp;244&nbsp;404)<br>a<br>Aničku Martinákovou<br>
+						(📧 princeznaannajohanka(at)gmail.com, 
+						☎️ 739&nbsp;361&nbsp;543).<br>✉️🐦
 					</div>
 				</div>
 			</div>
@@ -239,7 +242,7 @@
 					již zabraný. Dále prosíme, nenoste nám květiny, o ty bude na
 					svatbě postaráno. 🤩💐
 					<div class="cite">
-						*viz CHAPMAN, G. (2016). 5 jazyků lásky. Návrat domů.
+						*viz CHAPMAN, G. (2016). <i>5 jazyků lásky.</i> Návrat domů.
 					</div>
 				</div>
 			</div>
@@ -282,6 +285,7 @@
 									name="attendation"
 									id="lunch"
 									checked="true"
+									onchange="disableWhenCannot();"
 								/>
 								<span class="checkmark"></span>
 							</label>
@@ -291,23 +295,25 @@
 									type="radio"
 									name="attendation"
 									id="evening"
+									onchange="disableWhenCannot();"
 								/>
 								<span class="checkmark"></span>
 							</label>
 							<label class="radio-container">
 								<div style="padding-top: 2px">
-									Nemohu přijít
+									Nepřijdu
 								</div>
 								<input
 									type="radio"
 									name="attendation"
 									id="cannot"
+									onchange="disableWhenCannot();"
 								/>
 								<span class="checkmark"></span>
 							</label>
 						</div>
 						<div class="form-field">
-							<label for="dieta">Velikost porce</label>
+							<label for="dieta">Velikost obědové porce</label>
 							<label class="radio-container">
 								<div style="padding-top: 2px">Plná</div>
 								<input
@@ -343,11 +349,11 @@
 							</label>
 						</div>
 						<div class="form-field">
-							<label for="to-drink">Alkohol, který oceníte</label>
+							<label for="note">Poznámka</label>
 							<input
 								type="text"
-								name="to-drink"
-								id="drink-preferences-txt"
+								name="note"
+								id="note-txt"
 							/>
 						</div>
 
@@ -437,6 +443,19 @@
 					<div class="divider">
 						<img src="./res/divider2_gold.png" />
 					</div>
+				</div>
+			</div>
+
+			<div
+				class="tips-bookmark"
+				id="tips-bookmark"
+				style="display: none"
+			>
+				<div class="tips-header">Tipy v okolí</div>
+				<div id="tips-content" class="tips-content">
+					Ať už jste místní nebo přespolní, nabízíme vám pár tipů,
+					jak si zpříjemnit pobyt 🏔️🚶‍♂️🚶‍♀️🍽️😋, nebudete-li zrovna účastni
+					svatebního programu. 🎉🥳💃🕺 Vizte přiloženou mapku.
 				</div>
 			</div>
 

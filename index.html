@@ -285,14 +285,14 @@
 							/>
 						</div>
 						<div class="form-field">
-							<label for="dieta">Účast</label>
+							<label for="attendance">Účast</label>
 							<label class="radio-container">
 								<div style="padding-top: 2px">
 									Přijdu na oběd
 								</div>
 								<input
 									type="radio"
-									name="attendation"
+									name="attendance"
 									id="lunch"
 									checked="true"
 									onchange="disableWhenCannot();"
@@ -303,7 +303,7 @@
 								<div style="padding-top: 2px">Přijdu večer</div>
 								<input
 									type="radio"
-									name="attendation"
+									name="attendance"
 									id="evening"
 									onchange="disableWhenCannot();"
 								/>
@@ -313,7 +313,7 @@
 								<div style="padding-top: 2px">Nepřijdu</div>
 								<input
 									type="radio"
-									name="attendation"
+									name="attendance"
 									id="cannot"
 									onchange="disableWhenCannot();"
 								/>
@@ -321,7 +321,7 @@
 							</label>
 						</div>
 						<div class="form-field">
-							<label for="dieta">Velikost obědové porce</label>
+							<label for="portion">Velikost obědové porce</label>
 							<label class="radio-container">
 								<div style="padding-top: 2px">Plná</div>
 								<input
@@ -355,6 +355,13 @@
 								<input type="radio" name="diet" id="diet-yes" />
 								<span class="checkmark"></span>
 							</label>
+							<input
+								type="text"
+								placeholder="Jaká dieta?"
+								id="what-diet"
+								style="display: none"
+								disabled
+							/>
 						</div>
 						<div class="form-field">
 							<label for="note">Poznámka</label>

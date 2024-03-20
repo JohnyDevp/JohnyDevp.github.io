@@ -1,5 +1,23 @@
 var previousCannot;
 var previousEvening;
+
+// event when change radio button of diet
+let whatDietTxt = document.querySelector("#what-diet");
+document.body.addEventListener("change", function (e) {
+	let target = e.target;
+	switch (target.id) {
+		case "diet-no":
+			whatDietTxt.style.display = "none";
+			whatDietTxt.value = "";
+			whatDietTxt.disabled = true;
+			break;
+		case "diet-yes":
+			whatDietTxt.style.display = "grid";
+			whatDietTxt.disabled = false;
+			break;
+	}
+});
+
 function disableWhenCannot() {
 	if (previousCannot) {
 		//enable all the radio button
@@ -57,7 +75,7 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 
 	let name = document.getElementById("text-name").value;
 	let surname = document.getElementById("text-surname").value;
-	let attendation = document.querySelector('input[id="lunch"]:checked')
+	let attendance = document.querySelector('input[id="lunch"]:checked')
 		? "oběd"
 		: document.querySelector('input[id="evening"]:checked')
 		? "večer"
@@ -69,28 +87,29 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 		? "ano"
 		: "ne";
 	let note = document.getElementById("note-txt").value;
-	if (attendation == "nepřijdu") {
+	if (attendance == "nepřijdu") {
 		portion = "-";
 		diet = "-";
 	}
-	if (attendation == "večer") {
+	if (attendance == "večer") {
 		portion = "-";
 	}
-	console.log(diet, portion, attendation, note);
 
-	if (!(name && surname && attendation && portion && diet)) {
+	if (!(name && surname && attendance && portion && diet)) {
 		alert("Prosím vyplňte všechna pole!");
 	} else {
 		const url =
-			"https://script.google.com/macros/s/AKfycbxcV7K3RcFqMiy5MiwSRgSoSfpcKeW1F9tPhTBEmH7nUwkQkPBGNMBHXW52McJi8SKd/exec?" +
+			"https://script.google.com/macros/s/AKfycbzBCI82NPTncLma1BMqqBue2DJ8RfcSTnAZj4OGxAhJT2JBpVPfDeZ4h64onoOqb1fb/exec?" +
 			new URLSearchParams({
 				name: name,
 				surname: surname,
-				attendation: attendation,
+				attendance: attendance,
 				portion: portion,
 				diet: diet,
-				drink: note,
+				note: note,
+				whatdiet: whatDietTxt.value,
 			});
+		console.log(url);
 
 		// reset to default
 		document.getElementById("text-name").value = "";
@@ -99,7 +118,9 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 		document.querySelector('input[id="full"]').checked = "true";
 		document.querySelector('input[id="diet-no"]').checked = "true";
 		document.getElementById("note-txt").value = "";
+		whatDietTxt.value = "";
 
+		// wait for the response to display notification
 		await fetch(url)
 			.then((response) => response.text())
 			.then((text) => {

@@ -667,15 +667,6 @@
 
 	/* CLAIM */
 	.claim-bookmark {
-		/* 
-		margin-top: 50px;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 100vw;
-		overflow-y: scroll;
-		align-items: center; */
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -688,14 +679,6 @@
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
-
-		/*margin-top: 100px;
-		margin-bottom: 100px;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 100vw;
-		overflow-y: scroll;*/
 	}
 	.claim-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -715,8 +698,8 @@
 		flex-direction: column;
 		align-items: center;
 
-		padding-top: 10%;
-		padding-bottom: 15%;
+		padding-top: 4%;
+		padding-bottom: 4%;
 
 		height: 88vh;
 		width: 80vh;
@@ -728,7 +711,6 @@
 		font-family: "SitkaSmall_italic1";
 	}
 	.claim-content::-webkit-scrollbar {
-		/* color: red; */
 		display: none;
 	}
 	.claim-content > .content-text {

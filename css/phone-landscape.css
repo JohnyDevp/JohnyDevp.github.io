@@ -1,4 +1,4 @@
-@media screen and (max-height: 800px) and (orientation: landscape) {
+@media (orientation: landscape) and (hover: none) and (pointer: coarse)/*screen and (max-height: 800px) and (orientation: landscape)*/ {
 	/* setup for body */
 	body {
 		padding: 0;
@@ -23,5 +23,352 @@
 	.background-for-landscape > img {
 		height: 100vh;
 		width: 100vw;
+	}
+
+	.mainpage-body {
+		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(2, 46%);
+		
+		grid-template-rows: repeat(1, 100%);
+		align-items: center;
+		width: 100%;
+	}
+
+	.mainpage-ot-logo {
+		margin:0px;
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: center;
+
+		position: center;
+
+		align-items: center;
+		animation: 1s ease-out 0s 1 slideFromBottom;
+	}
+
+	.mainpage-ot-logo > img {
+		float: right;
+		width: 45vw;
+		min-width:auto;
+	}
+
+	.timer-container {
+		/* margin:0px; */
+		display: flex;
+		height: 100%;
+		width: 100%;
+		flex-direction: column-reverse;
+		justify-content: center;
+
+		align-items: center;
+		text-align: center;
+
+		animation: 1s ease-out 0s 1 slideFromTop;
+	}
+
+	.timer-heading {
+		font-size: 260%;
+		color: #204486;
+		font-weight: bolder;
+	}
+
+	.mainpage-remaining-time {
+		font-weight: 700;
+		font-size: 260%;
+
+		color: #d1a431;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.content-container {
+		display: grid;
+		justify-content: center;
+		justify-self: center;
+		align-items: center;
+
+		height: 100%;
+		width: 100%;
+
+		background-color: rgba(240, 248, 255, 0.199);
+		background-image: url(./../res/circlever_wbg.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100vw;
+	}
+
+	.register-popup-bg {
+		display: grid;
+		width: 70vw;
+		max-width: 450px;
+		padding: 10px;
+		height: 60vh;
+		max-height: 230px;
+		background-color: #204486;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		border-radius: 15px;
+		animation: ease-in 1s 1 showPopup;
+	}
+
+	.info-bookmark {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		
+		justify-content: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+
+		border-radius: 50%;
+		height: 88vw;
+		width: 88vw;
+	}
+
+	.info-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		padding-top: 5%;
+		padding-bottom: 11%;
+
+		width: 80vw;
+		height: 60vh;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+	}
+
+	.about-bookmark {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		
+		justify-content: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+
+		border-radius: 50%;
+		height: 88vw;
+		width: 88vw;
+	}
+
+	.about-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		padding-top: 5%;
+		padding-bottom: 11%;
+
+		width: 80vw;
+		height: 60vh;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+	}
+
+	.gifts-bookmark {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		
+		justify-content: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+
+		border-radius: 50%;
+		height: 88vw;
+		width: 88vw;
+	}
+
+	.gifts-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		padding-top: 5%;
+		padding-bottom: 11%;
+
+		width: 80vw;
+		height: 60vh;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+		font-size: 200%;
+	}
+
+	.claim-bookmark {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		
+		justify-content: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+
+		border-radius: 50%;
+		height: 88vw;
+		width: 88vw;
+	}
+
+	.claim-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		padding-top: 5%;
+		padding-bottom: 11%;
+
+		width: 80vw;
+		height: 60vh;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+	}
+
+	.program-bookmark {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		
+		justify-content: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+
+		border-radius: 50%;
+		height: 88vw;
+		width: 88vw;
+	}
+
+	.program-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-top: 5%;
+		padding-bottom: 11%;
+
+		width: 80vw;
+		height: 60vh;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+	}
+
+	.program-content > li {
+		margin: 20px 0px 10px 0px;
+		list-style: none;
+		display: grid;
+		grid-template-columns: 20vw 60vw;
+		text-decoration: none;
+		color: #3b3685;
+		font-weight: 900;
+		font-size: 2em;
+	}
+
+	.tips-bookmark {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		
+		justify-content: center;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+		align-items: center;
+
+		border-radius: 50%;
+		height: 88vw;
+		width: 88vw;
+	}
+
+	.tips-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		padding-top: 5%;
+		padding-bottom: 11%;
+
+		width: 80vw;
+		height: 60vh;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		font-family: "SitkaSmall_italic1";
+		font-size: 200%;
 	}
 }

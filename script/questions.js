@@ -13,7 +13,7 @@ const questions_arr = [
 	{
 		question: "Kdo chodí spát a vstává v rozumný čas (když je volno)?",
 		answer: "both",
-		suplement: "Terez 22:00-7:00, Ondra 0:30-9:00 😴",
+		suplement: "Terezka 22:00-7:00, Ondra 0:30-9:00 😴",
 	},
 	{
 		question: "Kdo je trpělivější?",

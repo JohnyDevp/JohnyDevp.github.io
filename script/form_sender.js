@@ -41,6 +41,9 @@ function disableWhenCannot() {
 		document.querySelector('input[id="half"]').checked = false;
 		document.querySelector('input[id="diet-no"]').checked = false;
 		document.querySelector('input[id="diet-yes"]').checked = false;
+		whatDietTxt.style.display = "none";
+		whatDietTxt.value = "";
+		whatDietTxt.disabled = true;
 		previousCannot = true;
 	}
 

@@ -58,7 +58,8 @@
 	}
 
 	.navbar > ul {
-		margin-top: 7vh;
+		margin-top: 60px;
+		overflow-y: scroll;
 		display: grid;
 		padding-left: 0;
 		grid-auto-flow: row;
@@ -67,6 +68,11 @@
 		justify-content: center;
 		align-items: center;
 		grid-auto-rows: max-content;
+	}
+
+	.navbar > ul::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 
 	.navbar > ul > li {
@@ -365,6 +371,10 @@
 		height: 88vh;
 		width: 88vh;
 	}
+	.info-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
 	.info-header {
 		margin-top: 10%;
 	}
@@ -419,10 +429,12 @@
 
 	.info-text-container {
 		margin: 0px 0px 0px 0px;
-		display: grid;
+		/* display: grid; */
 		text-align: center;
 		align-items: center;
 		justify-content: center;
+		
+		justify-items: center;
 
 		overflow-wrap: anywhere;
 		font-size: 200%;
@@ -431,6 +443,11 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	#ib-info.info-text-container{
+		display: grid;
+	}
+
 	.info-text-container li {
 		list-style: none;
 	}
@@ -532,6 +549,10 @@
 		height: 88vh;
 		width: 88vh;
 	}
+	.gifts-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
 	.gifts-header {
 		color: #d1a926;
 		font-size: 300%;
@@ -595,6 +616,11 @@
 		border-radius: 50%;
 		height: 88vh;
 		width: 88vh;
+	}
+	
+	.claim-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
 	}
 	.claim-header {
 		color: #d1a926;
@@ -708,6 +734,10 @@
 		height: 88vh;
 		width: 88vh;
 	}
+	.program-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
 
 	.program-header {
 		color: #d1a926;
@@ -778,6 +808,11 @@
 		height: 88vh;
 		width: 88vh;
 	}
+	
+	.tips-bookmark::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
 	.tips-header {
 		color: #d1a926;
 		font-size: 300%;
@@ -816,6 +851,6 @@
 		justify-content: center;
 
 		overflow-wrap: anywhere;
-		font-size: 200%;
+		/* font-size: 200%; */
 	}
 }

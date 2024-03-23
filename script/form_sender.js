@@ -102,7 +102,7 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
 		alert("Prosím vyplňte všechna pole!");
 	} else {
 		const url =
-			"https://script.google.com/macros/s/AKfycbxzNOmJYasbwUoHE8M2k8FM2-JPlr30JkT2G9Ogj0nXgMcOnYdzdXo4jWi1eOPcXbEe/exec?" +
+			"https://script.google.com/macros/s/AKfycbzBCI82NPTncLma1BMqqBue2DJ8RfcSTnAZj4OGxAhJT2JBpVPfDeZ4h64onoOqb1fb/exec?" +
 			new URLSearchParams({
 				name: name,
 				surname: surname,

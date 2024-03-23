@@ -21,6 +21,11 @@
 		position: relative;
 	}
 
+	/*********stars********/
+	#starmap {
+		height: 50%;
+	}
+
 	/**********MENUICON AND NAVBAR**********/
 	.menu-button-container {
 		z-index: 20;
@@ -63,6 +68,7 @@
 		display: grid;
 		padding-left: 0;
 		grid-auto-flow: row;
+		padding-bottom: 15%;
 		row-gap: 1em;
 		list-style: none;
 		justify-content: center;
@@ -111,7 +117,7 @@
 
 	.background-container {
 		display: flex;
-		z-index: -10;
+		z-index: -11;
 		position: absolute;
 
 		background-image: url("./../res/bg5.png");
@@ -150,7 +156,7 @@
 		overflow: hidden;
 		/* overflow-x: hidden;
 		overflow-y: scroll; */
-		background-color: #7777773b;
+		background-color: rgba(240, 248, 255, 0.199);
 	}
 
 	.mainpage-body {
@@ -320,7 +326,10 @@
 		border-radius: 15px;
 		animation: ease-in 1s 1 showPopup;
 	}
-
+	.register-popup-bg::-webkit-scrollbar {
+		/* color: red; */
+		display: none;
+	}
 	.register-text {
 		text-align: center;
 		font-family: "Sitkasmall_italic1";

@@ -1,4 +1,4 @@
-@media (orientation: landscape) and (hover: none) and (pointer: coarse)/*screen and (max-height: 800px) and (orientation: landscape)*/ {
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 1080px)/*screen and (max-height: 800px) and (orientation: landscape)*/ {
 	/* setup for body */
 	body {
 		padding: 0;

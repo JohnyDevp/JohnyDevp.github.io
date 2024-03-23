@@ -198,3 +198,32 @@ function changeInfoContent_btnClick(btn_id) {
 	}
 	currentActiveBtn = btn_id;
 }
+
+
+/*******stars********/
+var rand = Math.random();
+
+var map = document.querySelector('#starmap');
+
+function makeStar() {
+  var newstar = document.createElement('div');
+  newstar.style.backgroundColor = '#ffe';
+  newstar.style.borderRadius = '50%';
+  newstar.style.position = 'absolute';
+  newstar.style.top = Math.random()*100 + '%';
+  newstar.style.left = Math.random()*100 + '%';
+  newstar.style.height = 4 + Math.random()*2 + 'px';
+  newstar.style.width = newstar.style.height;
+  newstar.classList.add('star');
+  var glow = Math.random()*5;
+  newstar.style.boxShadow = '0 0 ' + glow + 'px' + " " + glow*0.7 + 'px #fff';
+  newstar.style.animationDuration = Math.random()*3+1 + 's';
+  map.appendChild(newstar);
+  
+  var stArr = document.querySelectorAll('.star');
+  if (stArr.length >= 300){
+    clearInterval(fadeInt);
+  }
+  }
+
+var fadeInt = setInterval(makeStar, 50);

@@ -197,14 +197,9 @@ finalHTML += `
 document.getElementById("about-content").innerHTML += finalHTML;
 
 
-// var radioButtons = document.getElementsByClassName("your class name");
-// for(var i=0;i<radioButtons.length;i++) {
-//    radioButtons[i].disabled = true;
-// }
-
-
-
 function showAnswers() {
+	const answers = [];
+	
 	let questions_cards_divs = document.getElementsByClassName("question-card");
 	for (let q_id = 0; q_id < questions_arr.length; q_id++) {
 		let radio_containers =
@@ -218,6 +213,9 @@ function showAnswers() {
 			let radio_design =
 				radio_containers[rad_id].querySelector(".checkmark");
 			if (radio_input.checked) {
+				// save answer for statistics
+				answers[q_id] = radio_input.id.match(/[a-z]+/g);
+
 				if (
 					radio_input.id ==
 					questions_arr[q_id].answer + q_id.toString()
@@ -247,7 +245,15 @@ function showAnswers() {
 				}
 			}
 			radio_input.disabled = true;
-			// radio_input.checked = "checked";
 		}
 	}
+
+	/****** send to sheets*******/
+	const url =
+	"https://script.google.com/macros/s/AKfycbwtmSRKpAd8MEteT_2vVW0JkZw4jUAEYlVCcd90S4E4VeDN6L0JORqO3avWDvIr0VIkaw/exec?" + 
+	new URLSearchParams({
+		answers: answers
+	});
+	console.log(url);
+	fetch(url);
 }

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1080px) /*(orientation: portrait) */ {
+@media only screen and (max-width: 1000px) /*(orientation: portrait) */ {
 	html,
 	body {
 		width: 100%;

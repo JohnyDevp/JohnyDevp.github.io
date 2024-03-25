@@ -60,7 +60,7 @@
 }
   
 
-@media (min-width: 1081px) {
+@media (min-width: 1001px) {
 	/******************* MASTER SETUP *********************/
 	html,
 	body {
@@ -264,7 +264,7 @@
 		/*background-size: auto 100%;*/
 
 		/* background-size: 1200px; */
-		background-size: 100vh;
+		background-size: auto 110%;
 
 		justify-content: center;
 		justify-self: center;
@@ -373,26 +373,21 @@
 
 	/* INFO */
 	.info-bookmark {
-		/* margin-top: 50px; */
-		/* display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 100vw;
-		overflow-y: scroll;
-		align-items: center; */
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		position: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		transform: translate(-50%);
+		left: 50%;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
 		border-radius: 50%;
-		height: 88vh;
-		width: 88vh;
+		height: 98.5%;
+		/* width: 88vh; */
 	}
 	.info-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -402,26 +397,6 @@
 		margin-top: 3%;
 	}
 	.info-content {
-		/* display: flex;
-		flex-direction: column;
-		align-items: center;
-
-
-		padding-top: 30px;
-		padding-bottom: 120px;
-		border-top-left-radius: 300px;
-		border-top-right-radius: 300px;
-		border-bottom-left-radius: 450px;
-		border-bottom-right-radius: 450px;
-		max-width: 800px;
-		width: 70%;
-		height: inherit;
-
-		overflow-x: hidden;
-		overflow-y: scroll;
-
-		font-family: "SitkaSmall_italic1"; */
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -438,7 +413,6 @@
 		overflow-y: scroll;
 
 		font-family: "SitkaSmall_italic1";
-		/* border-style:solid; */
 	}
 	.info-content::-webkit-scrollbar {
 		/* color: red; */
@@ -519,28 +493,22 @@
 
 	/* ABOUT */
 	.about-bookmark {
-		/* position: bottom; */
-		/*margin-top: 5px;*/
-		/* margin-bottom: 100px; */
-		/* height: 100%;
-		width: 100vw;
-		overflow-x:hidden;
-		overflow-y: scroll; */
-		/*margin: 14%;*/
-		/* border-style: solid; */
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		position: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		transform: translate(-50%);
+		left: 50%;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
 		border-radius: 50%;
-		height: 88vh;
-		width: 88vh;
+		height: 98.5%;
+		/* width: 88vh; */
+	
 	}
 	.about-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -562,28 +530,6 @@
 		display: none;
 	}
 	.about-content {
-		/* padding-top: 20px; */
-		/*margin-bottom: 2%;
-		margin-top: 2%;*/
-		/* margin: 1%; */
-
-		/* background-color: #204486; */
-		/* border-radius: 50%; */
-		/*border-top-left-radius: 300px;
-		border-top-right-radius: 300px;
-		border-bottom-left-radius: 450px;
-		border-bottom-right-radius: 450px;*/
-		/*max-width: 800px;
-		width: 60%;*/
-		/*width: inherit;
-		height: inherit;*/
-		/*size: auto 90%;*/
-		/*height: 90%;*/
-		/*aspect-ratio: 1 / 1;*/
-
-		/* border-style: solid; */
-		/*position: center;*/
-
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -634,23 +580,20 @@
 		flex-direction: column;
 		align-items: center;
 
-		position: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		transform: translate(-50%);
+		left: 50%;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
 		border-radius: 50%;
-		height: 88vh;
-		width: 88vh;
+		height: 98.5%;
+		/* width: 88vh; */
 
-		/* margin-top: 100px;
-		align-items: center;*/
 		justify-content: center;
-		/* display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 100vw;
-		overflow-y: scroll; */
+
 	}
 	.gifts-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -690,23 +633,6 @@
 
 		font-family: "SitkaSmall_italic1";
 
-		/* display: flex;
-		flex-direction: column;
-		align-items: center; */
-		/* text-align: center; */
-
-		/* padding-top: 20px;
-		padding-bottom: 20px;
-		margin-bottom: 10%; */
-		/* width: fit-content; */
-		/* width: 40vw;
-		max-width: 500px;
-		height: inherit; */
-
-		/* overflow-x: hidden;
-		overflow-y: scroll;
-
-		font-family: "SitkaSmall_italic1"; */
 		font-size: 200%;
 	}
 	.gifts-content::-webkit-scrollbar {
@@ -724,7 +650,6 @@
 		color: black;
 		font-size: 100%;
 		width: fit-content;
-		/* font-family: Arial, Helvetica, sans-serif; */
 	}
 	.gifts-link img {
 		max-height: 40px;
@@ -742,14 +667,17 @@
 		flex-direction: column;
 		align-items: center;
 
-		position: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		transform: translate(-50%);
+		left: 50%;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
 		border-radius: 50%;
-		height: 88vh;
-		width: 88vh;
+		height: 98.5%;
+		/* width: 88vh; */
 	}
 	.claim-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -859,22 +787,17 @@
 		flex-direction: column;
 		align-items: center;
 
-		position: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		transform: translate(-50%);
+		left: 50%;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
 		border-radius: 50%;
-		height: 88vh;
-		width: 88vh;
-
-		/* margin-top: 50px;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		width: 100vw;
-		overflow-y: scroll;
-		align-items: center; */
+		height: 98.5%;
+		/* width: 88vh; */
 	}
 	.program-bookmark::-webkit-scrollbar {
 		/* color: red; */
@@ -912,28 +835,10 @@
 		overflow-y: scroll;
 
 		font-family: "SitkaSmall_italic1";
-
-		/* display: flex;
-		flex-direction: column;
-		align-items: center; */
-
-		/*padding-top: 20px;
-		margin-bottom: 150px;*/
-		/* width: fit-content; */
-		/*width: 100vw;
-		height: inherit;*/
-
-		/* padding-top: 5%;
-		padding-bottom: 10%;
-		margin-bottom: 1%;
-		border-radius: 50%;
-		height: 75%;
-		aspect-ratio: 1.25 / 1; */
-
-		/* overflow-x: hidden;
+	
 		overflow-y: scroll;
 
-		font-family: "SitkaSmall_italic1"; */
+		font-family: "SitkaSmall_italic1";
 	}
 	.program-content::-webkit-scrollbar {
 		/* color: red; */
@@ -975,14 +880,17 @@
 		flex-direction: column;
 		align-items: center;
 
-		position: center;
+		position: relative;
+		aspect-ratio: 1/1;
+		transform: translate(-50%);
+		left: 50%;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		align-items: center;
 		border-radius: 50%;
-		height: 88vh;
-		width: 88vh;
+		height: 98.5%;
+		/* width: 88vh; */
 
 		justify-content: center;
 	}

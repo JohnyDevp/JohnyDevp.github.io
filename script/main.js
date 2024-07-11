@@ -1,28 +1,36 @@
 // remaining time count animation
 let counter = document.getElementById("timer");
+let popupValidBeforeWedding =
+	(new Date(2024, 6, 13, 10, 30, 0) - Date.now()) / 1000 > 0;
 setInterval(() => {
 	let diff = (new Date(2024, 6, 13, 10, 30, 0) - Date.now()) / 1000;
-	let days = Math.floor(diff / (60 * 60 * 24));
-	let hours = Math.floor((diff % (60 * 60 * 24)) / (60 * 60));
-	let minutes = Math.floor((diff % (60 * 60)) / 60);
-	let seconds = Math.floor(diff % 60);
-	counter.innerHTML = `${days} ${
-		days > 4 || days == 0 ? "dnů" : days > 1 ? "dny" : "den"
-	} <br> ${hours} ${
-		hours > 4 || hours == 0 ? "hodin" : hours > 1 ? "hodiny" : "hodina"
-	} <br> ${minutes} ${
-		minutes > 4 || minutes == 0
-			? "minut"
-			: minutes > 1
-			? "minuty"
-			: "minuta"
-	} <br> ${seconds} ${
-		seconds > 4 || seconds == 0
-			? "vteřin"
-			: seconds > 1
-			? "vteřiny"
-			: "vteřina"
-	}`;
+	if (diff < 0) {
+		document.getElementById("timer-heading").remove();
+		counter.innerHTML =
+			"Novomanželé <br /> Terezka a Ondra <br /> &#128150; Szymikovi &#128150;";
+	} else {
+		let days = Math.floor(diff / (60 * 60 * 24));
+		let hours = Math.floor((diff % (60 * 60 * 24)) / (60 * 60));
+		let minutes = Math.floor((diff % (60 * 60)) / 60);
+		let seconds = Math.floor(diff % 60);
+		counter.innerHTML = `${days} ${
+			days > 4 || days == 0 ? "dnů" : days > 1 ? "dny" : "den"
+		} <br> ${hours} ${
+			hours > 4 || hours == 0 ? "hodin" : hours > 1 ? "hodiny" : "hodina"
+		} <br> ${minutes} ${
+			minutes > 4 || minutes == 0
+				? "minut"
+				: minutes > 1
+				? "minuty"
+				: "minuta"
+		} <br> ${seconds} ${
+			seconds > 4 || seconds == 0
+				? "vteřin"
+				: seconds > 1
+				? "vteřiny"
+				: "vteřina"
+		}`;
+	}
 }, 1000);
 
 // show the popup with ask for registration if the form hasn't been
@@ -40,6 +48,8 @@ async function showRegistrationPopup() {
 		}
 	}
 
+	if (!popupValidBeforeWedding) return;
+
 	await setTimeout(() => {
 		// show the popup by removal of the value none of the display property
 		document.getElementsByClassName(
@@ -49,6 +59,7 @@ async function showRegistrationPopup() {
 			"";
 	}, 700);
 }
+
 showRegistrationPopup();
 
 // hide the popup
@@ -141,7 +152,7 @@ function changeInfoContent_btnClick(btn_id) {
 	let ib_info_content = document.getElementById("ib-info");
 	let ib_contacts_content = document.getElementById("ib-contacts");
 	let ib_intro_content = document.getElementById("ib-intro");
-	
+
 	switch (btn_id) {
 		case "intro":
 			if (currentActiveBtn == "intro") break;
@@ -199,31 +210,31 @@ function changeInfoContent_btnClick(btn_id) {
 	currentActiveBtn = btn_id;
 }
 
-
 /*******stars********/
 var rand = Math.random();
 
-var map = document.querySelector('#starmap');
+var map = document.querySelector("#starmap");
 
 function makeStar() {
-  var newstar = document.createElement('div');
-  newstar.style.backgroundColor = '#ffe';
-  newstar.style.borderRadius = '50%';
-  newstar.style.position = 'absolute';
-  newstar.style.top = Math.random()*100 + '%';
-  newstar.style.left = Math.random()*100 + '%';
-  newstar.style.height = 4 + Math.random()*2 + 'px';
-  newstar.style.width = newstar.style.height;
-  newstar.classList.add('star');
-  var glow = Math.random()*5;
-  newstar.style.boxShadow = '0 0 ' + glow + 'px' + " " + glow*0.7 + 'px #fff';
-  newstar.style.animationDuration = Math.random()*3+1 + 's';
-  map.appendChild(newstar);
-  
-  var stArr = document.querySelectorAll('.star');
-  if (stArr.length >= 300){
-    clearInterval(fadeInt);
-  }
-  }
+	var newstar = document.createElement("div");
+	newstar.style.backgroundColor = "#ffe";
+	newstar.style.borderRadius = "50%";
+	newstar.style.position = "absolute";
+	newstar.style.top = Math.random() * 100 + "%";
+	newstar.style.left = Math.random() * 100 + "%";
+	newstar.style.height = 4 + Math.random() * 2 + "px";
+	newstar.style.width = newstar.style.height;
+	newstar.classList.add("star");
+	var glow = Math.random() * 5;
+	newstar.style.boxShadow =
+		"0 0 " + glow + "px" + " " + glow * 0.7 + "px #fff";
+	newstar.style.animationDuration = Math.random() * 3 + 1 + "s";
+	map.appendChild(newstar);
+
+	var stArr = document.querySelectorAll(".star");
+	if (stArr.length >= 300) {
+		clearInterval(fadeInt);
+	}
+}
 
 var fadeInt = setInterval(makeStar, 50);
